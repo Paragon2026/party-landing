@@ -1,11 +1,11 @@
 import React from 'react';
-import { Download, Smartphone, ArrowRight, Play } from 'lucide-react';
+import { Smartphone, Play } from 'lucide-react';
 
 export const FinalCta = () => {
   return (
     <section id="download" className="lp-section-gap lp-container">
       <div className="lp-final-card">
-        <span className="lp-eyebrow">🎲 Your Adventure Awaits</span>
+        <span className="lp-eyebrow">🎲 Get Started</span>
         <h2 className="lp-title-h2" style={{ maxWidth: '640px' }}>
           Ready to roll for <span className="lp-accent-gold">initiative</span> ?
         </h2>
@@ -59,17 +59,6 @@ export const FinalCta = () => {
               <div style={{ fontSize: '0.62rem', color: '#9DA8C3', textTransform: 'uppercase', letterSpacing: '0.5px' }}>DOWNLOAD ON THE</div>
               <div style={{ fontSize: '0.92rem', fontWeight: '800', color: '#FFF' }}>App Store</div>
             </div>
-          </a>
-        </div>
-
-        <div style={{ marginTop: '14px' }}>
-          <a 
-            href="https://party-app-rpg.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-            style={{ fontSize: '0.82rem', color: '#F4D068', textDecoration: 'underline', fontWeight: '700' }}
-          >
-            Or launch the instant Web Companion in browser →
           </a>
         </div>
       </div>

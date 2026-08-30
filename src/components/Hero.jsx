@@ -2,12 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
   MapPin, 
-  Users, 
-  Calendar, 
-  ShieldCheck, 
   Download, 
-  ArrowRight,
-  CheckCircle2
+  Globe
 } from 'lucide-react';
 
 export const Hero = () => {
@@ -22,7 +18,7 @@ export const Hero = () => {
         if (camp || inviter) {
           setInviteData({
             inviterName: inviter ? decodeURIComponent(inviter) : 'A Fellow Adventurer',
-            campaignTitle: 'Curse of Strahd: Lands of Barovia'
+            campaignTitle: 'Curse of Strahd: Barovia'
           });
         }
       }
@@ -32,11 +28,11 @@ export const Hero = () => {
   return (
     <section className="lp-hero lp-container">
       <div className="lp-hero-copy">
-        {/* Dynamic Invite Banner if coming from an external link */}
+        {/* Dynamic Invite Banner if coming from a referral link */}
         {inviteData && (
           <div className="lp-invite-banner">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Sparkles size={24} color="#F4D068" style={{ flexShrink: 0 }} />
+              <Sparkles size={22} color="#F4D068" style={{ flexShrink: 0 }} />
               <div>
                 <div style={{ fontSize: '0.86rem', fontWeight: '800', color: '#FFF8E7' }}>
                   Invitation from <span style={{ color: '#F4D068', textDecoration: 'underline' }}>{inviteData.inviterName}</span> !
@@ -51,46 +47,30 @@ export const Hero = () => {
               className="lp-cta-primary"
               style={{ padding: '8px 16px', fontSize: '0.78rem', whiteSpace: 'nowrap' }}
             >
-              Claim Seat ⚔️
+              Claim Seat
             </a>
           </div>
         )}
 
-        {/* Social Proof Trust Badge */}
-        <div className="lp-rating-badge">
-          <span className="lp-rating-stars">★★★★★</span>
-          <span>4.9/5 Rating • Over 5,000 Active Tabletop Players</span>
-        </div>
-
         <h1 className="lp-title-display">
-          Find your ideal <br />
-          <span className="lp-accent-gold">tabletop RPG party</span>.
+          Find your <br />
+          <span className="lp-accent-gold">Party.</span>
         </h1>
 
-        <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.2rem)', color: 'var(--lp-text-soft)', maxWidth: '540px', margin: 0 }}>
-          No more last-minute cancellations. Discover thrilling in-person and virtual TTRPG tables with verified players, anti-ghosting karma, and built-in safety tools.
+        <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.18rem)', color: 'var(--lp-text-soft)', maxWidth: '520px', margin: 0, lineHeight: 1.55 }}>
+          No more last-minute cancellations. Discover in-person and virtual TTRPG tables with reliable players who actually show up.
         </p>
 
-        {/* Action Button Row */}
+        {/* Action Button */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '6px' }}>
-          <a href="#download" className="lp-cta-primary">
+          <a href="#download" className="lp-cta-primary" style={{ padding: '14px 32px', fontSize: '1.02rem' }}>
             <Download size={18} />
-            <span>Download the App</span>
-          </a>
-
-          <a 
-            href="https://party-app-rpg.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-            className="lp-cta-secondary"
-          >
-            <span>Try Web Version 🎲</span>
-            <ArrowRight size={16} />
+            <span>Download</span>
           </a>
         </div>
 
-        {/* Exact Value Proposition Checklist as requested by User */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.84rem', color: 'var(--lp-text-muted)', marginTop: '8px' }}>
+        {/* Value Proposition Checklist */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.86rem', color: 'var(--lp-text-muted)', marginTop: '8px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{ color: '#F4D068', fontWeight: '900' }}>✓</span>
             <span style={{ color: '#D6DCE8' }}>Free to download on iOS &amp; Android</span>
@@ -106,7 +86,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* 3D FLOATING PHONE MOCKUP (Showing Actual App Discovery Screenshot) */}
+      {/* 3D FLOATING PHONE MOCKUP (Actual App Discovery Feed) */}
       <div className="lp-phone-container">
         <div className="lp-phone-mockup">
           <div className="lp-phone-screen">
@@ -117,18 +97,14 @@ export const Hero = () => {
               borderBottom: '1.5px solid rgba(244, 208, 104, 0.3)',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between'
+              justifyContent: 'flex-start',
+              gap: '10px'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <img src="/party_logo.jpg" alt="Party" style={{ width: '22px', height: '22px', borderRadius: '50%', border: '1px solid #F4D068' }} />
-                <span style={{ fontFamily: 'Cinzel', fontSize: '0.88rem', fontWeight: '900', color: '#F4D068' }}>PARTY</span>
-              </div>
-              <span style={{ fontSize: '0.66rem', background: 'rgba(74, 222, 128, 0.18)', color: '#4ADE80', padding: '2px 8px', borderRadius: '12px', fontWeight: '800' }}>
-                ● 14 Nearby Tables
-              </span>
+              <img src="/party_logo.jpg" alt="Party" style={{ width: '24px', height: '24px', borderRadius: '50%', border: '1px solid #F4D068' }} />
+              <span style={{ fontFamily: 'Cinzel', fontSize: '0.92rem', fontWeight: '900', color: '#F4D068', letterSpacing: '0.5px' }}>PARTY</span>
             </div>
 
-            {/* Campaign Cards Feed (Actual App Screenshot representation) */}
+            {/* Campaign Cards Feed */}
             <div style={{ padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px', overflowY: 'hidden' }}>
               {/* Campaign Card 1 */}
               <div style={{
@@ -163,8 +139,8 @@ export const Hero = () => {
                   <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                     <MapPin size={11} color="#F4D068" /> Downtown / In-Person
                   </span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#4ADE80', fontWeight: '800' }}>
-                    ☸️ 100% Karma
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#F4D068', fontWeight: '800' }}>
+                    $10 / seat
                   </span>
                 </div>
               </div>
@@ -175,7 +151,7 @@ export const Hero = () => {
                 border: '1px solid var(--lp-border)',
                 borderRadius: '14px',
                 padding: '12px',
-                opacity: 0.9,
+                opacity: 0.95,
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '8px'
@@ -190,16 +166,21 @@ export const Hero = () => {
                     </h4>
                   </div>
                   <span style={{ fontSize: '0.65rem', background: 'rgba(56, 193, 114, 0.15)', color: '#4ADE80', padding: '2px 6px', borderRadius: '6px', fontWeight: '800' }}>
-                    Virtual (VTT)
+                    2/4 Seats Filled
                   </span>
                 </div>
-                <div style={{ fontSize: '0.68rem', color: 'var(--lp-text-muted)', display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Friday 8:00 PM</span>
-                  <span style={{ color: '#F4D068', fontWeight: '700' }}>Free Seat</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--lp-text-soft)', margin: 0, lineHeight: 1.4 }}>
+                  An eerie silence hangs over the estate as the storm gathers outside...
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '6px', fontSize: '0.68rem', color: 'var(--lp-text-muted)' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Globe size={11} color="#4ADE80" /> Online
+                  </span>
+                  <span style={{ color: '#4ADE80', fontWeight: '700' }}>Free Seat</span>
                 </div>
               </div>
 
-              {/* In-app Action Badge */}
+              {/* Feed Bottom Banner */}
               <div style={{
                 background: 'linear-gradient(135deg, #8B1111 0%, #D97724 100%)',
                 borderRadius: '12px',
@@ -209,9 +190,9 @@ export const Hero = () => {
                 fontSize: '0.78rem',
                 fontWeight: '800',
                 boxShadow: '0 4px 14px rgba(217, 119, 36, 0.4)',
-                marginTop: '4px'
+                marginTop: '2px'
               }}>
-                🎲 Match with 240+ Active Campaigns
+                Match with Active Campaigns
               </div>
             </div>
           </div>
