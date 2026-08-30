@@ -10,7 +10,7 @@ export const FeatureExperience = () => {
             <ShieldCheck size={14} /> Play With Confidence
           </span>
           <h2 className="lp-title-h2">
-            Built for better, <span className="lp-accent-gold">smoother tabletop games</span>
+            You focus on your experience, <span className="lp-accent-gold">we handle the rest</span>
           </h2>
           <p style={{ color: 'var(--lp-text-soft)', fontSize: '0.95rem' }}>
             Everything you need to enjoy respectful, committed, and memorable campaigns without the usual tabletop friction.
