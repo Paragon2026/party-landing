@@ -11,10 +11,10 @@ export const FeatureGMPro = () => {
               <Crown size={14} /> Game Master Hub
             </span>
             <h2 className="lp-title-h2">
-              Monetize your storytelling with <span className="lp-accent-gold">total peace of mind</span>
+              Professional storytelling is <span className="lp-accent-gold">welcomed</span>
             </h2>
             <p style={{ color: 'var(--lp-text-soft)', fontSize: '0.95rem' }}>
-              Run paid tables or split venue costs easily via your Stripe account (which you can connect directly in the app), with automated escrow protection and fair play guarantees.
+              Run paid tables safely using a free Stripe account letting you benefit from automated escrow protection and fair play guarantees.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginTop: '8px' }}>

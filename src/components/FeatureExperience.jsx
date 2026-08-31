@@ -3,14 +3,14 @@ import { ShieldCheck, Lock, Feather, UserCheck, Check } from 'lucide-react';
 
 export const FeatureExperience = () => {
   return (
-    <section id="experience" className="lp-section-gap lp-container">
+    <section id="features" className="lp-section-gap lp-container">
       <div className="lp-feature-row lp-reverse">
         <div className="lp-feature-body">
           <span className="lp-eyebrow">
-            <ShieldCheck size={14} /> Play With Confidence
+            <ShieldCheck size={14} /> Reducing friction to maximize fun
           </span>
           <h2 className="lp-title-h2">
-            You focus on your experience, <span className="lp-accent-gold">we handle the rest</span>
+            Features designed for <span className="lp-accent-gold">smoother gameplay</span>
           </h2>
           <p style={{ color: 'var(--lp-text-soft)', fontSize: '0.95rem' }}>
             Everything you need to enjoy respectful, committed, and memorable campaigns without the usual tabletop friction.
@@ -20,19 +20,19 @@ export const FeatureExperience = () => {
             <li className="lp-feature-item">
               <span className="lp-feature-check">✓</span>
               <div>
-                <strong>"Serious" players :</strong> Tabletop manners and attendance directly impact your karma score.
+                <strong>Instant karma :</strong> Tabletop manners and attendance impact your profile's reliability
               </div>
             </li>
             <li className="lp-feature-item">
               <span className="lp-feature-check">✓</span>
               <div>
-                <strong>Play safe :</strong> Only play games you feel safe playing by setting clear Lines &amp; Veils before joining.
+                <strong>Play safe :</strong> Filter games and set your Lines &amp; Veils to only play games you feel comfortable with.
               </div>
             </li>
             <li className="lp-feature-item">
               <span className="lp-feature-check">✓</span>
               <div>
-                <strong>Shared Quest Log :</strong> Keep all your campaign recaps, character info, and table notes in one place.
+                <strong>Shared Quest Log :</strong> Keep all your campaign recaps, epic moments, and table notes in one place.
               </div>
             </li>
           </ul>

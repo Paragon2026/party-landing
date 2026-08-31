@@ -14,8 +14,8 @@ export const Header = () => {
         </a>
 
         <nav className="lp-nav-links">
+          <a href="#scheduling" className="lp-nav-link">Scheduling</a>
           <a href="#features" className="lp-nav-link">Features</a>
-          <a href="#experience" className="lp-nav-link">Safety &amp; Karma</a>
           <a href="#gm-tools" className="lp-nav-link">Game Master</a>
           <a href="#reviews" className="lp-nav-link">Reviews</a>
           <a href="#faq" className="lp-nav-link">FAQ</a>

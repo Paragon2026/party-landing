@@ -3,7 +3,7 @@ import { Dice5, MapPin, Navigation, Star } from 'lucide-react';
 
 export const FeatureMatchmaking = () => {
   return (
-    <section id="features" className="lp-section-gap lp-container">
+    <section id="scheduling" className="lp-section-gap lp-container">
       <div className="lp-feature-row">
         <div className="lp-feature-body">
           <span className="lp-eyebrow">
@@ -20,13 +20,13 @@ export const FeatureMatchmaking = () => {
             <li className="lp-feature-item">
               <span className="lp-feature-check">✓</span>
               <div>
-                <strong>Granular game systems :</strong> D&amp;D 5e, Call of Cthulhu, Pathfinder 2e, Vampire: The Masquerade, Cyberpunk RED, OSR, and indie titles.
+                <strong>Find any game you want :</strong> Play your favorites like D&amp;D 5e, Call of Cthulhu, Pathfinder 2e or discover new ones like Cyberpunk RED, OSR, and other indie titles.
               </div>
             </li>
             <li className="lp-feature-item">
               <span className="lp-feature-check">✓</span>
               <div>
-                <strong>Smart Weekly Availability Heatmap :</strong> Map your preferred playtime in 30 seconds to let the app find the optimal time for your party !
+                <strong>Smart scheduling :</strong> Map your preferred playtime in 30s and let the app find the optimal time for everyone to meet !
               </div>
             </li>
             <li className="lp-feature-item">

@@ -58,7 +58,7 @@ export const Hero = () => {
         </h1>
 
         <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.18rem)', color: 'var(--lp-text-soft)', maxWidth: '520px', margin: 0, lineHeight: 1.55 }}>
-          No more last-minute cancellations. Discover in-person and virtual TTRPG tables with reliable players who actually show up.
+          Discover in-person and virtual TTRPG tables with reliable players who actually show up.
         </p>
 
         {/* Action Button */}
