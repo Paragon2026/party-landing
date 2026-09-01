@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dice5 } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
-import { PhoneVideoPlayer } from './PhoneVideoPlayer';
+import { InteractivePhoneScheduling } from './InteractivePhoneScheduling';
 
 export const FeatureMatchmaking = () => {
   const { loc } = useTranslation();
@@ -42,8 +42,8 @@ export const FeatureMatchmaking = () => {
           </ul>
         </div>
 
-        {/* 3D Phone Screen Mockup: Heatmap & Colored Pins */}
-        <PhoneVideoPlayer type="scheduling" style={{ transform: 'rotateY(6deg) rotateX(2deg)' }} />
+        {/* In-Screen Interactive Phone: Heatmap & Group Chat Scheduling Poll */}
+        <InteractivePhoneScheduling />
       </div>
     </section>
   );

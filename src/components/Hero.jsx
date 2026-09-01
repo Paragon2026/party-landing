@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Download } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
-import { PhoneVideoPlayer } from './PhoneVideoPlayer';
+import { InteractivePhoneHero } from './InteractivePhoneHero';
 
 export const Hero = () => {
   const { loc, lang } = useTranslation();
@@ -84,8 +84,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* 3D Phone Screen Mockup */}
-      <PhoneVideoPlayer type="discovery" />
+      {/* Real In-Screen Interactive Phone Mockup */}
+      <InteractivePhoneHero />
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
-import { PhoneVideoPlayer } from './PhoneVideoPlayer';
+import { InteractivePhoneTutorial } from './InteractivePhoneTutorial';
 
 export const FeatureExperience = () => {
   const { loc } = useTranslation();
@@ -42,8 +42,8 @@ export const FeatureExperience = () => {
           </ul>
         </div>
 
-        {/* 3D Phone Screen Mockup: Unified 3-in-1 Tabs */}
-        <PhoneVideoPlayer type="experience" style={{ transform: 'rotateY(-6deg) rotateX(2deg)' }} />
+        {/* Looped Onboarding Tutorial Interactive Phone */}
+        <InteractivePhoneTutorial />
       </div>
     </section>
   );
