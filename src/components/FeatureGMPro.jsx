@@ -1,6 +1,7 @@
 import React from 'react';
 import { Crown, CreditCard, Heart } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
+import { PhoneVideoPlayer } from './PhoneVideoPlayer';
 
 export const FeatureGMPro = () => {
   const { loc } = useTranslation();
@@ -8,8 +9,8 @@ export const FeatureGMPro = () => {
   return (
     <section id="gm-tools" className="lp-section-gap lp-container">
       <div className="lp-pro-card">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px', alignItems: 'center' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '680px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '36px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <span className="lp-eyebrow" style={{ background: 'rgba(244, 208, 104, 0.2)', color: '#F4D068', borderColor: '#F4D068' }}>
               <Crown size={14} /> {loc.gm.eyebrow}
             </span>
@@ -32,6 +33,11 @@ export const FeatureGMPro = () => {
                 <div style={{ fontSize: '0.75rem', color: '#9DA8C3', marginTop: '4px' }}>{loc.gm.card2Desc}</div>
               </div>
             </div>
+          </div>
+
+          {/* Real GM Manager Screenshot Phone */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <PhoneVideoPlayer type="gm" style={{ transform: 'rotateY(-4deg)' }} />
           </div>
         </div>
       </div>
