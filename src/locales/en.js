@@ -1,181 +1,121 @@
 export const en = {
+  meta: {
+    title: 'Party — A tabletop RPG table near you',
+    description:
+      'Find a tabletop RPG game, settle the time and the place with the group, then play. System, seats, tone and themes are announced before you apply.',
+  },
   nav: {
-    scheduling: "Scheduling",
-    features: "Features",
-    gameMaster: "Game Master",
-    reviews: "Reviews",
-    faq: "FAQ",
-    download: "Download"
+    find: 'Find a table',
+    planning: 'Scheduling',
+    meeting: 'Meeting point',
+    gm: 'For GMs',
+    faq: 'FAQ',
+    download: 'Download',
   },
   hero: {
-    inviteFrom: "Invitation from",
-    invitedToJoin: "You were invited to join",
-    claimSeat: "Claim Seat",
-    downloadAppToClaim: "Download the app to claim your seat!",
-    titlePrefix: "Find your",
-    titleSuffix: "Party.",
-    subtitle: "Discover in-person and virtual TTRPG tables with reliable players who actually show up.",
-    ctaDownload: "Download",
-    badgeFree: "Free to download on iOS & Android",
-    badgeModes: "In-person & virtual (VTT) campaigns",
-    badgeVenues: "Solves scheduling conflicts & meeting venues automatically",
-    mockup: {
-      seatsFilled: "Seats Filled",
-      ongoingCampaign: "Ongoing Campaign",
-      oneShot: "One-Shot",
-      freeSeat: "Free Seat",
-      seatPrice: "$10 / seat",
-      online: "Online",
-      inPerson: "Downtown / In-Person",
-      matchActiveCampaigns: "Match with Active Campaigns"
-    }
+    eyebrow: 'Tabletop role-playing, in person',
+    title: 'A table near you',
+    lead:
+      'Find a game, settle the time and the place with the group, then play. System, seats, tone and themes are announced before you apply.',
+    cta: 'Get it on Google Play',
+    proof: [
+      '1,795 clubs and associations already on the map',
+      'Themes and limits announced on every listing',
+      'Time and place chosen together',
+    ],
   },
-  scheduling: {
-    eyebrow: "Smart Matchmaking",
-    title: "Find games that match your",
-    titleAccent: "exact schedule",
-    description: "Never waste hours digging through crowded Discord servers. Filter local in-person sessions and virtual tabletop games by game systems, experience level, and verified availability.",
-    bullet1Title: "Find any game you want :",
-    bullet1Desc: "Play your favorites like D&D 5e, Call of Cthulhu, Pathfinder 2e or discover new ones like Cyberpunk RED, OSR, and other indie titles.",
-    bullet2Title: "Smart scheduling :",
-    bullet2Desc: "Map your preferred playtime in 30s and let the app find the optimal time for everyone to meet !",
-    bullet3Title: "Meeting Venues :",
-    bullet3Desc: "Find venues you can all meet at with minimal travel distance.",
-    mockup: {
-      header: "Schedule & Location Match",
-      subHeader: "Party Heatmap & Map Pins",
-      optimalTimeFound: "Optimal Time Found",
-      optimalSlot: "Fri 8PM (4/4 Players)",
-      optimalVenue: "Optimal Venue",
-      venueName: "The Gilded Dragon Boardgame Café",
-      venueBenefit: "Minimal travel distance • 12 min avg. travel time for all players"
-    }
+  planning: {
+    eyebrow: 'The scheduler',
+    title: 'No more endless polls',
+    lead:
+      'Everyone fills in their availability on the weekly grid. Party works out the slot where the whole table is free and opens the vote.',
+    bullets: [
+      ['Three states:', 'available, flexible, busy — one hour at a time.'],
+      ['The common slot comes out by itself,', 'with the number of players free.'],
+      ['One vote, one session.', 'The chosen slot blocks the hour in everyone’s calendar.'],
+    ],
   },
-  experience: {
-    eyebrow: "Reducing friction to maximize fun",
-    title: "Features designed for",
-    titleAccent: "smoother gameplay",
-    description: "Everything you need to enjoy respectful, committed, and memorable campaigns without the usual tabletop friction.",
-    bullet1Title: "Instant karma :",
-    bullet1Desc: "Tabletop manners and attendance impact your profile's reliability",
-    bullet2Title: "Play safe :",
-    bullet2Desc: "Filter games and set your Lines & Veils to only play games you feel comfortable with.",
-    bullet3Title: "Shared Quest Log :",
-    bullet3Desc: "Keep all your campaign recaps, epic moments, and table notes in one place.",
-    mockup: {
-      header: "Player Trust & Table Hub",
-      subHeader: "Campaign Essentials",
-      karmaScore: "100% Karma Score",
-      karmaSubtitle: "Certified on-time attendance",
-      karmaPill: "Flawless",
-      safetyMatrix: "Safety Matrix",
-      safetyGmConfirmed: "GM Confirmed",
-      linesTag: "🚫 Lines Respected",
-      veilsTag: "🌫️ Veils Active",
-      questLogTitle: "Shared Quest Log",
-      questLogSession: "Session #6",
-      questLogText: "The party rested at the Blue Water Inn after retrieving the silver amulet...",
-      questLogGroupNotes: "✍️ Group Notes",
-      questLogSealedLore: "🗿 Sealed Lore"
-    }
+  meeting: {
+    eyebrow: 'Meeting in real life',
+    title: 'A fair meeting point',
+    lead:
+      'Party finds the middle of the group from the places people declared, then suggests the game bars, cafés and associations around it. The group votes.',
+    bullets: [
+      ['1,795 clubs and associations', 'already on the map, with their opening days.'],
+      ['Addresses stay private:', 'only the midpoint is shared, never your home.'],
+      ['The chosen venue', 'shows up in the campaign lounge.'],
+    ],
+  },
+  chat: {
+    eyebrow: 'Your table has its lounge',
+    title: 'Talk before, during, after',
+    lead:
+      'Every campaign has its group chat, private messages and session recaps, written down by the GM.',
+    bullets: [
+      ['Table chat', 'with the scheduling poll and the venue vote built in.'],
+      ['Session recaps', 'to reread before the next one — no more “where were we?”.'],
+      ['Safety panel', 'to ask the GM for a limit, anonymously.'],
+    ],
+  },
+  safety: {
+    eyebrow: 'Before you apply',
+    title: 'Themes are announced, limits are guaranteed',
+    lead:
+      'On every listing the GM states what the game may touch on and what they guarantee stays off the table. You keep your own list of topics to avoid: games that announce one never show up in your search.',
+    bullets: [
+      ['Declarative filter:', 'no reading between the lines, only what the GM announced.'],
+      ['Anonymous limit requests:', 'the GM accepts or declines, the table never knows.'],
+      ['Works online and in person.', ''],
+    ],
+    cardTitle: 'The Crypts of Vaudrac',
+    flagsLabel: 'This game may touch on:',
+    flags: ['Horror', 'Violence', 'Grief'],
+    linesLabel: 'Guaranteed off the table:',
+    lines: ['Sexual violence', 'Violence against children'],
   },
   gm: {
-    eyebrow: "Game Master Hub",
-    title: "Professional storytelling is",
-    titleAccent: "welcomed",
-    description: "Run paid tables safely using a free Stripe account letting you benefit from automated escrow protection and fair play guarantees.",
-    card1Title: "Guaranteed Escrow Holds",
-    card1Desc: "Seat fees are secured in advance and released only after the session concludes.",
-    card2Title: "Direct Player Tipping (Tip Jar)",
-    card2Desc: "Receive player appreciation and tips directly to your connected Stripe account."
-  },
-  reviews: {
-    eyebrow: "Community Reviews",
-    title: "Loved by",
-    titleAccent: "Game Masters & Players",
-    items: [
-      {
-        author: "Alexander R.",
-        role: "D&D 5e Player (London)",
-        rating: 5,
-        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80",
-        comment: "Found an in-person campaign 10 minutes from my apartment with super reliable players. Zero cancellations over 6 straight months."
-      },
-      {
-        author: "Clara \"Laurinette\"",
-        role: "Vampire GM (New York)",
-        rating: 5,
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
-        comment: "The built-in Lines & Veils safety matrix let us explore deep, gothic horror themes with complete confidence and player comfort."
-      },
-      {
-        author: "Thomas G.",
-        role: "Call of Cthulhu GM (Chicago)",
-        rating: 5,
-        avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80",
-        comment: "Automated Stripe escrow and anti-ghosting karma saved me countless hours of administrative headache."
-      },
-      {
-        author: "Sophie M.",
-        role: "Beginner Adventurer (Seattle)",
-        rating: 5,
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
-        comment: "The 'Beginner Friendly' filter and step-by-step onboarding made finding my first table effortless."
-      },
-      {
-        author: "Marcus B.",
-        role: "Pathfinder 2e Player (Boston)",
-        rating: 5,
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-        comment: "The fair meeting point calculator on the map ended 3-hour Discord scheduling debates."
-      }
-    ]
+    eyebrow: 'For GMs',
+    title: 'Player or GM, one tap',
+    lead:
+      'One account, two ways to play. On the GM side: your games, the requests, the session to start — and, if you want, paid seats.',
+    roleTitle: 'One account, two roles',
+    roleText: 'Switch whenever you like. The campaigns you play in and the ones you run stay separate.',
+    payTitle: 'Charge for your games',
+    payText:
+      'Secure payments; the GM is paid after the session, the player refunded if it doesn’t happen.',
   },
   faq: {
-    eyebrow: "FAQ",
-    title: "Frequently Asked",
-    titleAccent: "Questions",
+    eyebrow: 'FAQ',
+    title: 'Common questions',
     items: [
       {
-        q: "Is the Party app free to download and use?",
-        a: "Yes ! Party lives off 10% commissions on tips and paid seats but offers the rest of the app for free"
+        q: 'Is Party free?',
+        a: 'Yes. Finding a table, the campaign lounge, the scheduler, the meeting point and the safety tools are free for everyone. Party only earns a commission on paid seats and tips.',
       },
       {
-        q: "How do you handle ghosting or no-shows ?",
-        a: "A Karma system tracks attendance. Following every session, the Game Master logs attendance and table manners ; showing up on time maintains a pristine score, contributing to a good atmosphere can even boost it while unexcused absences lower your reputation score visible to prospective tables."
+        q: 'How do themes and limits work?',
+        a: 'The GM announces on their listing the themes the game may touch on, and the ones they guarantee stay off the table. On your side you keep a list of topics you avoid: games that announce one disappear from your search. You can also ask the GM for a limit, anonymously.',
       },
       {
-        q: "Which tabletop RPG game systems are supported?",
-        a: "All of them! From mainstream titles (Dungeons & Dragons 5e, Call of Cthulhu, Pathfinder, Vampire, Cyberpunk RED) to indie rulesets, OSR, and homebrew games."
+        q: 'Which role-playing games are supported?',
+        a: 'All of them. From the classics (D&D 5e, Call of Cthulhu, Pathfinder 2e, Vampire, Cyberpunk RED) to indie games, the OSR and homebrew. The system is shown on every listing.',
       },
       {
-        q: "What are Lines & Veils ?",
-        a: "Lines are hard \"do not wish to see in a game\" limits whereas Veils are what you can tolerate as long as it's \"faded to black\" by the GM. You can filter games based on this and also request for more but GMs remain free to refuse"
+        q: 'How does a paid seat work?',
+        a: 'The player’s card is pre-authorised and only charged after the session. If the GM cancels, or the player cancels more than 24 h ahead, the card is simply not charged. The GM receives the payment on their Stripe account once the session has been played.',
       },
-      {
-        q: "How does seat fee escrow work for paid sessions?",
-        a: "In a chat group, players are asked to pay their seat 6 days prior to the next game and they money is held in Stripe Escrow until the game is done at which point the money is transfered to GMs accounts. No shows pay their seats but GM cancellation triggers a full refund."
-      }
-    ]
+    ],
   },
-  finalCta: {
-    eyebrow: "Get Started",
-    title: "Ready to roll for",
-    titleAccent: "initiative",
-    description: "Join thousands of tabletop adventurers today. Download the Party app free on iOS and Android to find your dream group.",
-    getItOn: "GET IT ON",
-    googlePlay: "Google Play",
-    downloadOn: "DOWNLOAD ON THE",
-    appStore: "App Store"
-  },
-  mobileBar: {
-    freeOnStores: "Free on iOS & Android",
-    download: "Download"
+  final: {
+    title: 'Ready to roll?',
+    lead: 'Free on Android. Find a table, settle the time and the place, play.',
+    cta: 'Get it on Google Play',
   },
   footer: {
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    legal: "Legal Notices",
-    rightsReserved: "All rights reserved."
-  }
+    terms: 'Terms of Service',
+    privacy: 'Privacy Policy',
+    guidelines: 'Community Guidelines',
+    deletion: 'Delete your account',
+    copyright: '© 2026 Party',
+  },
 };

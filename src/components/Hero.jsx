@@ -1,91 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { Sparkles, Download } from 'lucide-react';
+import React from 'react';
 import { useTranslation } from '../context/LanguageContext';
-import { InteractivePhoneHero } from './InteractivePhoneHero';
+import { PLAY_STORE_URL } from '../links';
+import { Icon } from './Icons';
+import { PhoneFrame } from './PhoneFrame';
 
-export const Hero = () => {
-  const { loc, lang } = useTranslation();
-  const [inviteData, setInviteData] = useState(null);
+const PROOF_ICONS = ['pin', 'shield', 'calendar'];
 
-  useEffect(() => {
-    try {
-      if (typeof window !== 'undefined' && window.location.search) {
-        const params = new URLSearchParams(window.location.search);
-        const camp = params.get('campaign') || params.get('c');
-        const inviter = params.get('inviter') || params.get('inv');
-        if (camp || inviter) {
-          setInviteData({
-            inviterName: inviter ? decodeURIComponent(inviter) : (lang === 'fr' ? 'Un Compagnon de Jeu' : 'A Fellow Adventurer'),
-            campaignTitle: 'Curse of Strahd: Barovia'
-          });
-        }
-      }
-    } catch (e) {}
-  }, [lang]);
-
+export function Hero() {
+  const { loc } = useTranslation();
+  const t = loc.hero;
   return (
-    <section className="lp-hero lp-container">
-      <div className="lp-hero-copy">
-        {/* Dynamic Invite Banner if coming from a referral link */}
-        {inviteData && (
-          <div className="lp-invite-banner">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Sparkles size={22} color="#F4D068" style={{ flexShrink: 0 }} />
-              <div>
-                <div style={{ fontSize: '0.86rem', fontWeight: '800', color: '#FFF8E7' }}>
-                  {loc.hero.inviteFrom} <span style={{ color: '#F4D068', textDecoration: 'underline' }}>{inviteData.inviterName}</span> !
-                </div>
-                <div style={{ fontSize: '0.75rem', color: '#D6DCE8' }}>
-                  {loc.hero.invitedToJoin} <strong>{inviteData.campaignTitle}</strong>. {loc.hero.downloadAppToClaim}
-                </div>
-              </div>
-            </div>
-            <a 
-              href="#download"
-              className="lp-cta-primary"
-              style={{ padding: '8px 16px', fontSize: '0.78rem', whiteSpace: 'nowrap' }}
-            >
-              {loc.hero.claimSeat}
-            </a>
-          </div>
-        )}
-
-        <h1 className="lp-title-display">
-          {loc.hero.titlePrefix} <br />
-          <span className="lp-accent-gold">{loc.hero.titleSuffix}</span>
-        </h1>
-
-        <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.18rem)', color: 'var(--lp-text-soft)', maxWidth: '520px', margin: 0, lineHeight: 1.55 }}>
-          {loc.hero.subtitle}
-        </p>
-
-        {/* Action Button */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '6px' }}>
-          <a href="#download" className="lp-cta-primary" style={{ padding: '14px 32px', fontSize: '1.02rem' }}>
-            <Download size={18} />
-            <span>{loc.hero.ctaDownload}</span>
+    <section id="trouver" className="container hero split">
+      <div className="stack" style={{ gap: 28 }}>
+        <div className="eyebrow">{t.eyebrow}</div>
+        <h1 className="h1">{t.title}</h1>
+        <p className="lead lead--lg">{t.lead}</p>
+        <div className="hero-actions">
+          <a className="btn btn--gold" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+            <Icon name="play" size={20} color="#1C140E" />
+            <span>{t.cta}</span>
           </a>
         </div>
-
-        {/* Value Proposition Checklist */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.86rem', color: 'var(--lp-text-muted)', marginTop: '8px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ color: '#F4D068', fontWeight: '900' }}>✓</span>
-            <span style={{ color: '#D6DCE8' }}>{loc.hero.badgeFree}</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ color: '#F4D068', fontWeight: '900' }}>✓</span>
-            <span style={{ color: '#D6DCE8' }}>{loc.hero.badgeModes}</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ color: '#F4D068', fontWeight: '900' }}>✓</span>
-            <span style={{ color: '#D6DCE8' }}>{loc.hero.badgeVenues}</span>
-          </div>
+        <div className="proof">
+          {t.proof.map((line, i) => (
+            <div key={line} className="proof-item">
+              <Icon name={PROOF_ICONS[i]} size={18} color="#B85C00" />
+              <span>{line}</span>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Real In-Screen Interactive Phone Mockup */}
-      <InteractivePhoneHero />
+      <div className="hero-visual">
+        <PhoneFrame screen="discover" height={780} />
+      </div>
     </section>
   );
-};
+}

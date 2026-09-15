@@ -1,42 +1,38 @@
 import React from 'react';
-import { PartyLogo } from './PartyLogo';
-import { Download } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import { Logo } from './Logo';
 
-export const Header = () => {
-  const { loc } = useTranslation();
-
+function LanguageSwitcher() {
+  const { lang, setLanguage } = useTranslation();
   return (
-    <header className="lp-header">
-      <div className="lp-container lp-header-inner">
-        <a href="#" className="lp-logo-link">
-          <PartyLogo size={38} />
-          <span style={{ fontFamily: 'Cinzel', fontSize: '1.35rem', fontWeight: '900', color: '#FFF8E7', letterSpacing: '0.06em', lineHeight: 1 }}>
-            PARTY
-          </span>
-        </a>
+    <div className="lang" role="group" aria-label="Langue / Language">
+      <button type="button" aria-pressed={lang === 'fr'} onClick={() => setLanguage('fr')} title="Français">FR</button>
+      <button type="button" aria-pressed={lang === 'en'} onClick={() => setLanguage('en')} title="English">EN</button>
+    </div>
+  );
+}
 
-        <nav className="lp-nav-links">
-          <a href="#scheduling" className="lp-nav-link">{loc.nav.scheduling}</a>
-          <a href="#features" className="lp-nav-link">{loc.nav.features}</a>
-          <a href="#gm-tools" className="lp-nav-link">{loc.nav.gameMaster}</a>
-          <a href="#reviews" className="lp-nav-link">{loc.nav.reviews}</a>
-          <a href="#faq" className="lp-nav-link">{loc.nav.faq}</a>
-        </nav>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <LanguageSwitcher />
-          <a 
-            href="#download"
-            className="lp-cta-primary"
-            style={{ padding: '8px 16px', fontSize: '0.82rem' }}
-          >
-            <Download size={14} />
-            <span>{loc.nav.download}</span>
-          </a>
-        </div>
+export function Header() {
+  const { loc } = useTranslation();
+  const links = [
+    ['#trouver', loc.nav.find],
+    ['#planning', loc.nav.planning],
+    ['#rendezvous', loc.nav.meeting],
+    ['#mj', loc.nav.gm],
+    ['#faq', loc.nav.faq],
+  ];
+  return (
+    <header className="container header" id="top">
+      <Logo size={40} />
+      <nav className="nav" aria-label="Sections">
+        {links.map(([href, label]) => (
+          <a key={href} href={href}>{label}</a>
+        ))}
+      </nav>
+      <div className="header-right">
+        <LanguageSwitcher />
+        <a className="btn btn--gold btn--sm" href="#telecharger">{loc.nav.download}</a>
       </div>
     </header>
   );
-};
+}

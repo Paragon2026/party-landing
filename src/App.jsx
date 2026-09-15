@@ -1,39 +1,49 @@
-import React from 'react';
-import { LanguageProvider } from './context/LanguageContext';
+import React, { useEffect } from 'react';
+import { LanguageProvider, useTranslation } from './context/LanguageContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { FeatureMatchmaking } from './components/FeatureMatchmaking';
-import { FeatureExperience } from './components/FeatureExperience';
-import { FeatureGMPro } from './components/FeatureGMPro';
-import { ReviewsCarousel } from './components/ReviewsCarousel';
-import { FaqSection } from './components/FaqSection';
+import { Feature } from './components/Feature';
+import { Safety } from './components/Safety';
+import { GmSection } from './components/GmSection';
+import { Faq } from './components/Faq';
 import { FinalCta } from './components/FinalCta';
 import { Footer } from './components/Footer';
-import { MobileBottomBar } from './components/MobileBottomBar';
+
+function Page() {
+  const { lang, loc } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = loc.meta.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', loc.meta.description);
+  }, [lang, loc]);
+
+  return (
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
+      <div className="page-glow" />
+      <div style={{ position: 'relative' }}>
+        <Header />
+        <main>
+          <Hero />
+          <Feature id="planning" screen="planning" copy={loc.planning} />
+          <Feature id="rendezvous" screen="meeting" copy={loc.meeting} flip />
+          <Feature id="salon" screen="chat" copy={loc.chat} />
+          <Safety />
+          <GmSection />
+          <Faq />
+          <FinalCta />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div style={{ position: 'relative', width: '100%', minHeight: '100vh', background: 'var(--lp-bg)' }}>
-        {/* Ambient Lighting Background Elements */}
-        <div className="lp-glow-ambient lp-glow-gold" style={{ top: '-80px', left: '-100px' }} />
-        <div className="lp-glow-ambient lp-glow-crimson" style={{ top: '600px', right: '-120px' }} />
-        <div className="lp-glow-ambient lp-glow-gold" style={{ top: '1600px', left: '15%' }} />
-        <div className="lp-glow-ambient lp-glow-crimson" style={{ top: '2400px', right: '10%' }} />
-
-        <Header />
-        <main>
-          <Hero />
-          <FeatureMatchmaking />
-          <FeatureExperience />
-          <FeatureGMPro />
-          <ReviewsCarousel />
-          <FaqSection />
-          <FinalCta />
-        </main>
-        <Footer />
-        <MobileBottomBar />
-      </div>
+      <Page />
     </LanguageProvider>
   );
 }

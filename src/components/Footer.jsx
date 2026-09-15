@@ -1,34 +1,28 @@
 import React from 'react';
-import { PartyLogo } from './PartyLogo';
 import { useTranslation } from '../context/LanguageContext';
+import { LEGAL_URLS } from '../links';
+import { Logo } from './Logo';
 
-export const Footer = () => {
+export function Footer() {
   const { loc } = useTranslation();
-
+  const t = loc.footer;
+  const links = [
+    [LEGAL_URLS.terms, t.terms],
+    [LEGAL_URLS.privacy, t.privacy],
+    [LEGAL_URLS.guidelines, t.guidelines],
+    [LEGAL_URLS.deletion, t.deletion],
+  ];
   return (
-    <footer className="lp-footer lp-container">
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '24px', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <PartyLogo size={32} />
-          <strong style={{ fontFamily: 'Cinzel', color: '#FFF8E7', fontSize: '1.15rem', letterSpacing: '0.04em' }}>PARTY</strong>
-        </div>
-
-        <div className="lp-footer-links">
-          <a href="https://party-app-legal.vercel.app/" target="_blank" rel="noreferrer" className="lp-footer-link">
-            {loc.footer.terms}
-          </a>
-          <a href="https://party-app-legal.vercel.app/" target="_blank" rel="noreferrer" className="lp-footer-link">
-            {loc.footer.privacy}
-          </a>
-          <a href="https://party-app-legal.vercel.app/" target="_blank" rel="noreferrer" className="lp-footer-link">
-            {loc.footer.legal}
-          </a>
-        </div>
-      </div>
-
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', marginTop: '24px', paddingTop: '16px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '12px', alignItems: 'center', fontSize: '0.75rem' }}>
-        <span>© 2026 Party App. {loc.footer.rightsReserved}</span>
+    <footer className="footer">
+      <div className="container footer-inner">
+        <Logo size={32} />
+        <nav className="footer-links" aria-label="Legal">
+          {links.map(([href, label]) => (
+            <a key={href} href={href} target="_blank" rel="noreferrer">{label}</a>
+          ))}
+        </nav>
+        <div className="footer-copy">{t.copyright}</div>
       </div>
     </footer>
   );
-};
+}
