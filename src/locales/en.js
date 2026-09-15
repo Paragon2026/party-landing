@@ -82,7 +82,7 @@ export const en = {
     roleText: 'Switch whenever you like. The campaigns you play in and the ones you run stay separate.',
     payTitle: 'Charge for your games',
     payText:
-      'Secure payments; the GM is paid after the session, the player refunded if it doesn’t happen.',
+      'Secure payments; the GM is paid after the session, the player isn’t charged if it doesn’t happen.',
   },
   faq: {
     eyebrow: 'FAQ',
@@ -98,7 +98,7 @@ export const en = {
       },
       {
         q: 'Which role-playing games are supported?',
-        a: 'All of them. From the classics (D&D 5e, Call of Cthulhu, Pathfinder 2e, Vampire, Cyberpunk RED) to indie games, the OSR and homebrew. The system is shown on every listing.',
+        a: 'All of them.\nFrom the classics (D&D 5e, Call of Cthulhu, Pathfinder 2e, Vampire, Cyberpunk RED) to indie games, the OSR and homebrew.\nThe system is shown on every listing.',
       },
       {
         q: 'How does a paid seat work?',

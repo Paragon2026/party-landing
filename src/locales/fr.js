@@ -83,7 +83,7 @@ export const fr = {
       'Basculez quand vous voulez. Vos campagnes en tant que joueur et celles que vous menez restent séparées.',
     payTitle: 'Faites payer vos parties',
     payText:
-      'Système de paiement sécurisé ; le MJ est payé après la séance, le joueur remboursé si elle n’a pas lieu.',
+      'Système de paiement sécurisé ; le MJ est payé après la séance, le joueur n’est pas prélevé si elle n’a pas lieu.',
   },
   faq: {
     eyebrow: 'FAQ',
@@ -99,7 +99,7 @@ export const fr = {
       },
       {
         q: 'Quels jeux de rôle sont pris en charge ?',
-        a: 'Tous. Des classiques (D&D 5e, L’Appel de Cthulhu, Pathfinder 2e, Vampire, Cyberpunk RED) aux jeux indépendants, à l’OSR et aux créations maison. Le système est indiqué sur chaque fiche.',
+        a: 'Tous.\nDes classiques (D&D 5e, L’Appel de Cthulhu, Pathfinder 2e, Vampire, Cyberpunk RED) aux jeux indépendants, à l’OSR et aux créations maison.\nLe système est indiqué sur chaque fiche.',
       },
       {
         q: 'Comment se passe une place payante ?',
