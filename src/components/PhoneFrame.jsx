@@ -1,21 +1,15 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
-import discover from '../screens/discover.html?raw';
 import planning from '../screens/planning.html?raw';
 import meeting from '../screens/meeting.html?raw';
 import chat from '../screens/chat.html?raw';
-import gm from '../screens/gm.html?raw';
-import payment from '../screens/payment.html?raw';
 
 // Screens are 390px-wide HTML rebuilt from the app's components (same markup as the
-// Play Store captures). Light ones sit on the player theme, dark ones on the host theme.
+// Play Store captures), on the player theme. The clickable phone is Explorer.jsx.
 const SCREENS = {
-  discover: { html: discover, bg: '#F4ECE0', fg: '#1A1008' },
   planning: { html: planning, bg: '#F4ECE0', fg: '#1A1008' },
   meeting: { html: meeting, bg: '#F4ECE0', fg: '#1A1008' },
   chat: { html: chat, bg: '#F4ECE0', fg: '#1A1008' },
-  gm: { html: gm, bg: '#18110B', fg: '#FFF8E7' },
-  payment: { html: payment, bg: '#18110B', fg: '#FFF8E7' },
 };
 
 const OUTER_W = 418; // 390 screen + 12 padding + 2 border, each side

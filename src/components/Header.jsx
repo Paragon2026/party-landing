@@ -15,9 +15,10 @@ function LanguageSwitcher() {
 export function Header() {
   const { loc } = useTranslation();
   const links = [
-    ['#trouver', loc.nav.find],
+    ['#explorer', loc.nav.explorer],
     ['#planning', loc.nav.planning],
     ['#rendezvous', loc.nav.meeting],
+    ['#communautes', loc.nav.communities],
     ['#mj', loc.nav.gm],
     ['#faq', loc.nav.faq],
   ];
