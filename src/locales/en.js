@@ -25,6 +25,18 @@ export const en = {
   },
   "explorer": {
     "hint": "Tap Player · GM · Comm., then the tabs",
+    "modes": ["Player", "GM", "Comm."],
+    "tabs": {
+      "games": "Games",
+      "communities": "Communities",
+      "agenda": "Agenda"
+    },
+    "placeholder": {
+      "games": "Search for a game or a GM…",
+      "communities": "Search for a community, city or venue…",
+      "agenda": "Search for a community, city or venue…"
+    },
+    "browseLabel": "Browse",
     "player": {
       "games": {
         "eyebrow": "Player mode · Games",

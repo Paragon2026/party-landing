@@ -25,6 +25,18 @@ export const fr = {
   },
   "explorer": {
     "hint": "Touchez Joueur · MJ · Comm., puis les onglets",
+    "modes": ["Joueur", "MJ", "Comm."],
+    "tabs": {
+      "games": "Parties",
+      "communities": "Communautés",
+      "agenda": "Agenda"
+    },
+    "placeholder": {
+      "games": "Rechercher une partie ou un MJ…",
+      "communities": "Rechercher une communauté, une ville ou un lieu…",
+      "agenda": "Rechercher une communauté, une ville ou un lieu…"
+    },
+    "browseLabel": "Parcourir",
     "player": {
       "games": {
         "eyebrow": "Mode Joueur · Parties",

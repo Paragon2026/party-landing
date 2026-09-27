@@ -5,14 +5,23 @@ import { Icon } from './Icons';
 
 // Bodies of the five phone states: 390 px HTML, inline styles, same format as
 // src/screens/*.html. The header (mode switch) and the directory bar (tabs) are
-// real React buttons below, so the phone can be clicked.
-import games from '../screens/explorer/games.html?raw';
-import communities from '../screens/explorer/communities.html?raw';
-import agenda from '../screens/explorer/agenda.html?raw';
-import gm from '../screens/explorer/gm.html?raw';
-import community from '../screens/explorer/community.html?raw';
+// real React buttons below, so the phone can be clicked. Each screen has an FR
+// and an EN body since their content (dates, labels) is baked into the markup.
+import gamesFr from '../screens/explorer/games.html?raw';
+import communitiesFr from '../screens/explorer/communities.html?raw';
+import agendaFr from '../screens/explorer/agenda.html?raw';
+import gmFr from '../screens/explorer/gm.html?raw';
+import communityFr from '../screens/explorer/community.html?raw';
+import gamesEn from '../screens/explorer/games.en.html?raw';
+import communitiesEn from '../screens/explorer/communities.en.html?raw';
+import agendaEn from '../screens/explorer/agenda.en.html?raw';
+import gmEn from '../screens/explorer/gm.en.html?raw';
+import communityEn from '../screens/explorer/community.en.html?raw';
 
-const BODIES = { games, communities, agenda, gm, community };
+const BODIES = {
+  fr: { games: gamesFr, communities: communitiesFr, agenda: agendaFr, gm: gmFr, community: communityFr },
+  en: { games: gamesEn, communities: communitiesEn, agenda: agendaEn, gm: gmEn, community: communityEn },
+};
 
 const SANS = "'Plus Jakarta Sans', system-ui, sans-serif";
 const SERIF = "'Cinzel', Georgia, serif";
@@ -42,12 +51,12 @@ const THEME = {
   },
 };
 
-const MODES = [['player', 'Joueur'], ['gm', 'MJ'], ['community', 'Comm.']];
-const TABS = [['games', 'Parties', 'scroll'], ['communities', 'Communautés', 'landmark'], ['agenda', 'Agenda', 'calendarDays']];
-const PLACEHOLDER = { games: 'Rechercher une partie ou un MJ…', communities: 'Rechercher une communauté, une ville ou un lieu…', agenda: 'Rechercher une communauté, une ville ou un lieu…' };
+// Structural IDs and icons only — labels come from loc.explorer (modes/tabs/placeholder).
+const MODE_IDS = ['player', 'gm', 'community'];
+const TAB_IDS = [['games', 'scroll'], ['communities', 'landmark'], ['agenda', 'calendarDays']];
 const RESET = { margin: 0, padding: 0, cursor: 'pointer', appearance: 'none', WebkitAppearance: 'none', font: 'inherit' };
 
-function AppHeader({ mode, onMode }) {
+function AppHeader({ mode, onMode, modeLabels }) {
   const th = THEME[mode];
   return (
     <div style={{ padding: '14px 18px 10px', background: th.header, borderBottom: `1.5px solid ${th.line}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 6 }}>
@@ -56,14 +65,14 @@ function AppHeader({ mode, onMode }) {
         <div style={{ fontFamily: SERIF, fontSize: '1.05rem', fontWeight: 900, color: th.word, letterSpacing: 1 }}>PARTY</div>
       </div>
       <div role="group" aria-label="Mode" style={{ display: 'flex', width: 136, height: 36, boxSizing: 'border-box', padding: 2, borderRadius: 20, ...th.box }}>
-        {MODES.map(([id, label]) => {
+        {MODE_IDS.map((id, i) => {
           const on = id === mode;
           return (
             <button key={id} type="button" aria-pressed={on} onClick={() => onMode(id)}
               style={{ ...RESET, flex: 1, height: '100%', borderRadius: 18, fontFamily: SANS, fontSize: '0.6875rem', fontWeight: 600, letterSpacing: 0.2,
                 transition: 'background 300ms cubic-bezier(0.4, 0, 0.2, 1)',
                 ...(on ? th.on : { background: 'transparent', border: '1.5px solid transparent', color: th.off }) }}>
-              {label}
+              {modeLabels[i]}
             </button>
           );
         })}
@@ -72,22 +81,22 @@ function AppHeader({ mode, onMode }) {
   );
 }
 
-function DirectoryBar({ tab, onTab }) {
+function DirectoryBar({ tab, onTab, tabLabels, placeholder, browseLabel }) {
   return (
     <div style={{ padding: '10px 12px', background: '#EADCBF', borderBottom: '1.5px solid #B8860B', display: 'flex', flexDirection: 'column', gap: 8 }}>
       <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
         <span style={{ position: 'absolute', left: 12, display: 'flex' }}><Icon name="search" size={15} color="#B85C00" /></span>
-        <div style={{ width: '100%', background: '#FFFFFF', color: '#4A3525', border: '1.5px solid #B8860B', borderRadius: 20, padding: '7px 32px 7px 34px', fontFamily: SANS, fontSize: '0.82rem', fontWeight: 600 }}>{PLACEHOLDER[tab]}</div>
+        <div style={{ width: '100%', background: '#FFFFFF', color: '#4A3525', border: '1.5px solid #B8860B', borderRadius: 20, padding: '7px 32px 7px 34px', fontFamily: SANS, fontSize: '0.82rem', fontWeight: 600 }}>{placeholder[tab]}</div>
       </div>
-      <div role="tablist" aria-label="Parcourir" style={{ display: 'flex', gap: 3, background: '#FFFFFF', border: '1.5px solid #B8860B', borderRadius: 12, padding: 3 }}>
-        {TABS.map(([id, label, icon]) => {
+      <div role="tablist" aria-label={browseLabel} style={{ display: 'flex', gap: 3, background: '#FFFFFF', border: '1.5px solid #B8860B', borderRadius: 12, padding: 3 }}>
+        {TAB_IDS.map(([id, icon]) => {
           const on = id === tab;
           const fg = on ? '#FFFFFF' : '#4A3525';
           return (
             <button key={id} type="button" role="tab" aria-selected={on} onClick={() => onTab(id)}
               style={{ ...RESET, flex: 1, minHeight: 44, borderRadius: 9, border: 'none', padding: '6px 4px', background: on ? '#B85C00' : 'transparent', color: fg,
                 fontFamily: SANS, fontSize: '0.8125rem', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-              <Icon name={icon} size={14} color={fg} /><span>{label}</span>
+              <Icon name={icon} size={14} color={fg} /><span>{tabLabels[id]}</span>
             </button>
           );
         })}
@@ -100,7 +109,7 @@ const OUTER_W = 418;
 const SCREEN_H = 780;
 
 /** The clickable phone: its own state, scaled to fit its column like PhoneFrame. */
-function ExplorerPhone({ mode, tab, onMode, onTab }) {
+function ExplorerPhone({ mode, tab, onMode, onTab, lang, t }) {
   const ref = useRef(null);
   const [scale, setScale] = useState(1);
   useLayoutEffect(() => {
@@ -118,9 +127,9 @@ function ExplorerPhone({ mode, tab, onMode, onTab }) {
     <div ref={ref} className="phone-scaler" style={{ width: Math.round(OUTER_W * scale), height: Math.round((SCREEN_H + 28) * scale) }}>
       <div className="phone" style={{ height: SCREEN_H + 28, transform: `scale(${scale})` }}>
         <div className="phone-screen" style={{ height: SCREEN_H, background: th.screen, color: th.text }}>
-          <AppHeader mode={mode} onMode={onMode} />
-          {mode === 'player' && <DirectoryBar tab={tab} onTab={onTab} />}
-          <div key={key} className="xp-fade" dangerouslySetInnerHTML={{ __html: BODIES[key] }} />
+          <AppHeader mode={mode} onMode={onMode} modeLabels={t.modes} />
+          {mode === 'player' && <DirectoryBar tab={tab} onTab={onTab} tabLabels={t.tabs} placeholder={t.placeholder} browseLabel={t.browseLabel} />}
+          <div key={key} className="xp-fade" dangerouslySetInnerHTML={{ __html: BODIES[lang][key] }} />
         </div>
       </div>
     </div>
@@ -128,7 +137,7 @@ function ExplorerPhone({ mode, tab, onMode, onTab }) {
 }
 
 export function Explorer() {
-  const { loc } = useTranslation();
+  const { loc, lang } = useTranslation();
   const [mode, setMode] = useState('player');
   const [tab, setTab] = useState('games');
   const t = loc.explorer;
@@ -138,7 +147,7 @@ export function Explorer() {
     <section id="explorer" className="container explorer split">
       <div className="explorer-visual">
         <div className="explorer-hint"><Icon name="pointer" size={16} color="#B85C00" />{t.hint}</div>
-        <ExplorerPhone mode={mode} tab={tab} onMode={setMode} onTab={setTab} />
+        <ExplorerPhone mode={mode} tab={tab} onMode={setMode} onTab={setTab} lang={lang} t={t} />
       </div>
       <div className="explorer-copy" aria-live="polite">
         <div key={key} className="stack stack--copy xp-fade">
