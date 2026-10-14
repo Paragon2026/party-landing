@@ -15,28 +15,16 @@ export const en = {
   "hero": {
     "eyebrow": "Tabletop role-playing, in person",
     "title": "A table near you",
-    "lead": "Find a game, settle the time and the place with the group, then play. Or take a seat at a game night run by an association, a game bar or a convention near you.",
+    "lead": "Playing online will do in a pinch. But nothing beats a real table, dice rolling and friends across from you.",
     "cta": "Get it on Google Play",
     "proof": [
-      "1,795 communities already on the map",
+      "Hundreds of communities already on the map",
       "Themes and limits announced on every listing",
-      "Coming game nights and conventions in the Agenda"
+      "Coming game nights and conventions, day by day"
     ]
   },
   "explorer": {
-    "hint": "Tap Player · GM · Comm., then the tabs",
-    "modes": ["Player", "GM", "Comm."],
-    "tabs": {
-      "games": "Games",
-      "communities": "Communities",
-      "agenda": "Agenda"
-    },
-    "placeholder": {
-      "games": "Search for a game or a GM…",
-      "communities": "Search for a community, city or venue…",
-      "agenda": "Search for a community, city or venue…"
-    },
-    "browseLabel": "Browse",
+    "hint": "Tap Player · GM · Club, then the tabs",
     "player": {
       "games": {
         "eyebrow": "Player mode · Games",
@@ -64,7 +52,7 @@ export const en = {
         "bullets": [
           [
             "Join them",
-            "on request, with their access code or in one tap."
+            "in one tap when they’re open, otherwise on request."
           ],
           [
             "Their tables",
@@ -77,12 +65,12 @@ export const en = {
         ]
       },
       "agenda": {
-        "eyebrow": "Player mode · Agenda",
+        "eyebrow": "Player mode · Rendez-vous",
         "title": "Walk in, sit down, play",
         "lead": "Association game nights, game-bar evenings, conventions: everything happening around you, day by day, with the number of tables already planned.",
         "bullets": [
           [
-            "Make the Agenda yours:",
+            "Make your rendez-vous yours:",
             "join communities to see the game nights and events they run."
           ],
           [
@@ -111,7 +99,7 @@ export const en = {
         ],
         [
           "Partnering with a convention?",
-          "“Propose a table here”, no access code needed."
+          "“Propose a table here”, right on its rendez-vous."
         ]
       ]
     },
@@ -121,8 +109,8 @@ export const en = {
       "lead": "For the people running an association, a venue or a convention: a mode of its own, with its own theme.",
       "bullets": [
         [
-          "Your listing and access code:",
-          "description, hours, Discord; a QR to print or share."
+          "Your listing and join policy:",
+          "description, hours, Discord; open to all or on approval."
         ],
         [
           "Your rendez-vous,",
@@ -138,7 +126,7 @@ export const en = {
   "communities": {
     "eyebrow": "Communities",
     "title": "Where role-playing already happens",
-    "lead": "Party doesn’t replace your association, your bar or your convention — it fills them with tables. Communities are on the map, their rendez-vous in the Agenda, their tables in the app.",
+    "lead": "Party doesn’t replace your association, your bar or your convention — it fills them with tables. Communities are on the map, their rendez-vous day by day, their tables in the app.",
     "kinds": {
       "association": {
         "label": "Association",
@@ -150,14 +138,14 @@ export const en = {
       },
       "event": {
         "label": "Event",
-        "text": "Convention, fair, festival: its dates, tables reserved for attendees, the access code on the ticket."
+        "text": "Convention, fair, festival: its dates, tables reserved for attendees, its partner associations."
       }
     },
     "stepsTitle": "At the convention, in four steps",
     "steps": [
       {
-        "title": "Scan the QR on your ticket",
-        "text": "With your phone’s camera. The link opens Party and lets you into the event."
+        "title": "Join the event",
+        "text": "From its listing, in Rendez-vous or the directory: in one tap when it’s open, otherwise the organiser accepts your request."
       },
       {
         "title": "Say when you want to play",
@@ -173,7 +161,9 @@ export const en = {
       }
     ],
     "visuals": {
-      "ticket": "Ticket · 2 days",
+      "event": "Les Rencontres de Brumeval",
+      "eventMeta": "Verified event · 17 – 18 Oct",
+      "join": "Join the event",
       "whole": "The whole time",
       "pick": "Pick my hours",
       "table": "The Ball of Soot Masks",
@@ -182,7 +172,7 @@ export const en = {
       "apply": "Ask to join",
       "applyMeta": "GM approval"
     },
-    "noteTicket": "Without a ticket, the convention stays visible in the Agenda; its tables open with the access code.",
+    "noteTicket": "Without an account, the convention and its rendez-vous stay visible; its tables open to its attendees. Party doesn’t sell tickets.",
     "noteAge": "Joining a community, chatting in its channels and applying to its tables: 18 and over.",
     "toOrganizers": "Running an association, a venue or a convention? See Community mode"
   },
@@ -211,7 +201,7 @@ export const en = {
     "lead": "Party finds the middle of the group from the places people declared, then suggests the game bars, cafés and associations around it. The group votes.",
     "bullets": [
       [
-        "1,795 communities",
+        "Hundreds of communities",
         "already on the map, with their opening days."
       ],
       [
@@ -302,7 +292,7 @@ export const en = {
       "association": {
         "label": "Association",
         "title": "Your nights, your members",
-        "text": "Your regular nights in the Agenda, your members and their requests, your channels. Your GMs attach their tables to the night: they’re reserved for members."
+        "text": "Your regular nights in Rendez-vous, your members and their requests, your channels. Your GMs attach their tables to the night: they’re reserved for members."
       },
       "venue": {
         "label": "Venue",
@@ -311,8 +301,8 @@ export const en = {
       },
       "event": {
         "label": "Event",
-        "title": "Your tables, from the ticket on",
-        "text": "Convention, fair, festival: your dates, an access code to print on tickets, tables reserved for attendees, and partner associations that run some."
+        "title": "Your tables, for your attendees",
+        "text": "Convention, fair, festival: your dates, tables reserved for attendees, and partner associations that run some."
       }
     },
     "toolsTitle": "Everything runs from the app",
@@ -322,8 +312,8 @@ export const en = {
         "Description, address, opening hours, Discord, verified contact."
       ],
       [
-        "Access code and QR",
-        "Show it, share it or print it; replaced in one tap if it leaks."
+        "Join policy",
+        "Open to all or on approval: you choose, your officers handle the requests."
       ],
       [
         "Rendez-vous",
@@ -356,15 +346,15 @@ export const en = {
     "items": [
       {
         "q": "What is a community on Party?",
-        "a": "A place where role-playing happens in real life: an association, a venue (game bar, shop, games library) or an event (convention, fair, festival). Each has its listing, its rendez-vous in the Agenda and its tables, reserved for its members.\nThe directory and the Agenda can be browsed freely. Joining a community, chatting in its channels and applying to its tables: 18 and over."
+        "a": "A place where role-playing happens in real life: an association, a venue (game bar, shop, games library) or an event (convention, fair, festival). Each has its listing, its rendez-vous and its tables, reserved for its members.\nThe directory and the rendez-vous can be browsed freely. Joining a community, chatting in its channels and applying to its tables: 18 and over."
       },
       {
-        "q": "How does an event’s access code work?",
-        "a": "Every community has an 8-character code, with its QR. For an event, the organiser prints it on tickets or posters: scan it with your phone’s camera, the link opens Party and lets you in. Say when you want to play, and the event’s tables open to you.\nParty doesn’t sell tickets: the code comes with yours."
+        "q": "How do I join a convention?",
+        "a": "Open its listing from Rendez-vous or the directory and join it: in one tap when it’s open, otherwise the organiser accepts your request. Then say when you want to play with “I’ll be there”: the event’s tables open to you.\nParty doesn’t sell tickets: admission is handled by the convention’s organisers."
       },
       {
         "q": "I run a convention or a bar: how do I sign up?",
-        "a": "A venue (bar, shop, games library) lists itself from the app, then goes through verification.\nFor an independent convention, write to the Party team (rqn75j3lc@mozmail.com): we create the event, verify it and hand it over to you.\nYour association may already be among the 1,795 communities on the map: write to us to take it over."
+        "a": "A venue (bar, shop, games library) lists itself from the app, then goes through verification.\nFor an independent convention, write to the Party team (rqn75j3lc@mozmail.com): we create the event, verify it and hand it over to you.\nYour association may already be among the hundreds of communities on the map: write to us to take it over."
       },
       {
         "q": "How do themes and limits work?",

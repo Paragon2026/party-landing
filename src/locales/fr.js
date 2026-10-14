@@ -15,28 +15,16 @@ export const fr = {
   "hero": {
     "eyebrow": "Jeu de rôle sur table, en vrai",
     "title": "Une table près de chez vous",
-    "lead": "Trouvez une partie, fixez le créneau et le lieu avec le groupe, puis jouez. Ou prenez place à la soirée d’une association, d’un bar à jeux ou d’une convention près de chez vous.",
+    "lead": "Jouer en ligne, ça dépanne. Mais rien ne vaut une vraie table, des dés qui roulent et des amis en face.",
     "cta": "Disponible sur Google Play",
     "proof": [
-      "1 795 communautés déjà sur la carte",
+      "Des centaines de communautés déjà sur la carte",
       "Thèmes et limites annoncés sur chaque fiche",
-      "Soirées et conventions à venir dans l’Agenda"
+      "Soirées et conventions à venir, jour par jour"
     ]
   },
   "explorer": {
-    "hint": "Touchez Joueur · MJ · Comm., puis les onglets",
-    "modes": ["Joueur", "MJ", "Comm."],
-    "tabs": {
-      "games": "Parties",
-      "communities": "Communautés",
-      "agenda": "Agenda"
-    },
-    "placeholder": {
-      "games": "Rechercher une partie ou un MJ…",
-      "communities": "Rechercher une communauté, une ville ou un lieu…",
-      "agenda": "Rechercher une communauté, une ville ou un lieu…"
-    },
-    "browseLabel": "Parcourir",
+    "hint": "Touchez Joueur · MJ · Commu, puis les onglets",
     "player": {
       "games": {
         "eyebrow": "Mode Joueur · Parties",
@@ -64,7 +52,7 @@ export const fr = {
         "bullets": [
           [
             "Rejoignez-les",
-            "sur demande, avec leur code d’accès ou en un geste."
+            "en un geste si elles sont ouvertes, sinon sur demande."
           ],
           [
             "Leurs tables",
@@ -77,12 +65,12 @@ export const fr = {
         ]
       },
       "agenda": {
-        "eyebrow": "Mode Joueur · Agenda",
+        "eyebrow": "Mode Joueur · Rendez-vous",
         "title": "Arrivez les pieds sous la table",
         "lead": "Les soirées des associations et des bars à jeux, les conventions : tout ce qui se passe autour de vous, jour par jour, avec le nombre de tables déjà prévues.",
         "bullets": [
           [
-            "Personnalisez l’agenda :",
+            "Personnalisez vos rendez-vous :",
             "rejoignez des communautés pour voir les soirées et événements qu’elles proposent."
           ],
           [
@@ -111,7 +99,7 @@ export const fr = {
         ],
         [
           "Partenaire d’une convention ?",
-          "« Proposer une table ici », sans code d’accès."
+          "« Proposer une table ici », directement sur son rendez-vous."
         ]
       ]
     },
@@ -121,8 +109,8 @@ export const fr = {
       "lead": "Pour les responsables d’une association, d’un lieu ou d’une convention : un mode à part, avec son propre thème.",
       "bullets": [
         [
-          "Votre fiche et votre code d’accès :",
-          "description, horaires, Discord ; un QR à imprimer ou partager."
+          "Votre fiche et votre adhésion :",
+          "description, horaires, Discord ; ouverte à tous ou sur acceptation."
         ],
         [
           "Vos rendez-vous,",
@@ -138,7 +126,7 @@ export const fr = {
   "communities": {
     "eyebrow": "Communautés",
     "title": "Là où le jeu de rôle se passe déjà",
-    "lead": "Party ne remplace pas votre association, votre bar ou votre convention : il les remplit de tables. Les communautés sont sur la carte, leurs rendez-vous dans l’Agenda, leurs tables dans l’app.",
+    "lead": "Party ne remplace pas votre association, votre bar ou votre convention : il les remplit de tables. Les communautés sont sur la carte, leurs rendez-vous jour par jour, leurs tables dans l’app.",
     "kinds": {
       "association": {
         "label": "Association",
@@ -150,14 +138,14 @@ export const fr = {
       },
       "event": {
         "label": "Événement",
-        "text": "Convention, salon, festival : ses dates, ses tables réservées aux participants, le code d’accès sur le billet."
+        "text": "Convention, salon, festival : ses dates, ses tables réservées aux participants, ses associations partenaires."
       }
     },
     "stepsTitle": "À la convention, en quatre temps",
     "steps": [
       {
-        "title": "Scannez le QR de votre billet",
-        "text": "Avec l’appareil photo du téléphone. Le lien ouvre Party et vous fait entrer dans l’événement."
+        "title": "Rejoignez l’événement",
+        "text": "Depuis sa fiche, dans les Rendez-vous ou l’annuaire : en un geste s’il est ouvert, sinon l’organisateur accepte votre demande."
       },
       {
         "title": "Dites quand vous voulez jouer",
@@ -173,7 +161,9 @@ export const fr = {
       }
     ],
     "visuals": {
-      "ticket": "Billet · 2 jours",
+      "event": "Les Rencontres de Brumeval",
+      "eventMeta": "Événement vérifié · 17 – 18 oct.",
+      "join": "Rejoindre l’événement",
       "whole": "Toute la durée",
       "pick": "Choisir mes heures",
       "table": "Le Bal des Masques de Suie",
@@ -182,7 +172,7 @@ export const fr = {
       "apply": "Demander à rejoindre",
       "applyMeta": "Validation par le MJ"
     },
-    "noteTicket": "Sans billet, la convention reste visible dans l’Agenda ; ses tables s’ouvrent avec le code d’accès.",
+    "noteTicket": "Sans compte, la convention et ses rendez-vous restent visibles ; ses tables s’ouvrent à ses participants. Party ne vend pas de billets.",
     "noteAge": "Rejoindre une communauté, discuter dans ses canaux et postuler à ses tables : 18 ans et plus.",
     "toOrganizers": "Vous tenez une asso, un lieu ou une convention ? Découvrez le mode Communauté"
   },
@@ -201,7 +191,7 @@ export const fr = {
       ],
       [
         "Un vote, une séance.",
-        "Le créneau retenu bloque la case dans l’agenda de chacun."
+        "Le créneau retenu bloque la case dans les disponibilités de chacun."
       ]
     ]
   },
@@ -211,7 +201,7 @@ export const fr = {
     "lead": "Party calcule le milieu du groupe à partir des lieux déclarés, puis propose les bars à jeux, cafés et associations autour. Le groupe vote.",
     "bullets": [
       [
-        "1 795 communautés",
+        "Des centaines de communautés",
         "déjà placées sur la carte, avec leurs jours d’ouverture."
       ],
       [
@@ -302,7 +292,7 @@ export const fr = {
       "association": {
         "label": "Association",
         "title": "Vos soirées, vos membres",
-        "text": "Vos soirées régulières dans l’Agenda, vos membres et leurs demandes, vos canaux. Vos MJ rattachent leurs tables à la soirée : elles sont réservées aux membres."
+        "text": "Vos soirées régulières dans les Rendez-vous, vos membres et leurs demandes, vos canaux. Vos MJ rattachent leurs tables à la soirée : elles sont réservées aux membres."
       },
       "venue": {
         "label": "Lieu",
@@ -311,8 +301,8 @@ export const fr = {
       },
       "event": {
         "label": "Événement",
-        "title": "Vos tables, dès le billet",
-        "text": "Convention, salon, festival : vos dates, un code d’accès à imprimer sur les billets, des tables réservées aux participants, et les associations partenaires qui en proposent."
+        "title": "Vos tables, pour vos participants",
+        "text": "Convention, salon, festival : vos dates, des tables réservées aux participants, et les associations partenaires qui en proposent."
       }
     },
     "toolsTitle": "Tout se gère depuis l’app",
@@ -322,8 +312,8 @@ export const fr = {
         "Description, adresse, horaires, Discord, contact vérifié."
       ],
       [
-        "Code d’accès et QR",
-        "À afficher, partager ou imprimer ; remplacé en un geste s’il fuite."
+        "Adhésion",
+        "Ouverte à tous ou sur acceptation : vous choisissez, vos officiers valident les demandes."
       ],
       [
         "Rendez-vous",
@@ -335,7 +325,7 @@ export const fr = {
       ],
       [
         "Membres et modération",
-        "Demandes d’adhésion, rôles, retirer un message ou un membre, sourdine de 24 h, signalements."
+        "Demandes d’adhésion, rôles, retirer un message ou un membre, sourdine de 24 h, signalements."
       ],
       [
         "Présence",
@@ -356,15 +346,15 @@ export const fr = {
     "items": [
       {
         "q": "Qu’est-ce qu’une communauté sur Party ?",
-        "a": "Un endroit où le jeu de rôle se passe en vrai : une association, un lieu (bar à jeux, boutique, ludothèque) ou un événement (convention, salon, festival). Chacune a sa fiche, ses rendez-vous dans l’Agenda et ses tables, réservées à ses membres.\nL’annuaire et l’Agenda se consultent librement. Rejoindre une communauté, discuter dans ses canaux et postuler à ses tables : 18 ans et plus."
+        "a": "Un endroit où le jeu de rôle se passe en vrai : une association, un lieu (bar à jeux, boutique, ludothèque) ou un événement (convention, salon, festival). Chacune a sa fiche, ses rendez-vous et ses tables, réservées à ses membres.\nL’annuaire et les rendez-vous se consultent librement. Rejoindre une communauté, discuter dans ses canaux et postuler à ses tables : 18 ans et plus."
       },
       {
-        "q": "Comment fonctionne le code d’accès d’un événement ?",
-        "a": "Chaque communauté a un code de 8 caractères, avec son QR. Pour un événement, l’organisateur l’imprime sur les billets ou les affiches : scannez-le avec l’appareil photo du téléphone, le lien ouvre Party et vous fait entrer. Dites quand vous voulez jouer, et les tables de l’événement s’ouvrent à vous.\nParty ne vend pas de billets : le code vient avec le vôtre."
+        "q": "Comment rejoindre une convention ?",
+        "a": "Ouvrez sa fiche depuis les Rendez-vous ou l’annuaire et rejoignez-la : en un geste si elle est ouverte, sinon l’organisateur accepte votre demande. Dites ensuite quand vous voulez jouer avec « J’y serai » : les tables de l’événement s’ouvrent à vous.\nParty ne vend pas de billets : l’entrée de la convention se règle avec ses organisateurs."
       },
       {
         "q": "J’organise une convention, je tiens un bar : comment m’inscrire ?",
-        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (rqn75j3lc@mozmail.com) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les 1 795 communautés sur la carte : écrivez-nous pour en prendre la gestion."
+        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (rqn75j3lc@mozmail.com) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les centaines de communautés sur la carte : écrivez-nous pour en prendre la gestion."
       },
       {
         "q": "Comment fonctionnent les thèmes et les limites ?",

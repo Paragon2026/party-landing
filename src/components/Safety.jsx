@@ -27,7 +27,7 @@ export function Safety() {
             <div className="safety-list">
               <div className="safety-label"><Icon name="shield" size={18} color="#6E1212" />{t.linesLabel}</div>
               <div className="chips">
-                {t.lines.map((l) => <span key={l} className="chip chip--line">{l}</span>)}
+                {t.lines.map((l) => <span key={l} className="chip chip--line"><Icon name="ban" size={12} color="currentColor" style={{ marginRight: 4, verticalAlign: '-1px' }} />{l}</span>)}
               </div>
             </div>
           </div>

@@ -2,25 +2,23 @@ import React from 'react';
 import { useTranslation } from '../context/LanguageContext';
 import { Icon } from './Icons';
 
-export const KIND_ICONS = { association: 'landmark', venue: 'store', event: 'ticket' };
+export const KIND_ICONS = { association: 'landmark', venue: 'store', event: 'calendarDays' };
 
 // One small illustration per convention step, drawn with the app's parchment tokens.
 function StepVisual({ index, v }) {
   switch (index) {
     case 0:
       return (
-        <div className="sv-ticket">
-          <Icon name="qrCode" size={34} color="#1A1008" />
-          <div>
-            <div className="sv-strong">{v.ticket}</div>
-            <div className="sv-meta"><Icon name="camera" size={13} color="#4A3525" /> K7QD-4MRA</div>
-          </div>
+        <div className="sv-join">
+          <div className="sv-strong">{v.event}</div>
+          <div className="sv-meta"><Icon name="badgeCheck" size={13} color="#1B7F3A" />{v.eventMeta}</div>
+          <span className="sv-btn">{v.join}</span>
         </div>
       );
     case 1:
       return (
         <div className="sv-choice">
-          <span className="is-on"><Icon name="check" size={13} color="#FFFFFF" />{v.whole}</span>
+          <span className="is-on"><Icon name="check" size={13} color="#6E1212" />{v.whole}</span>
           <span><Icon name="clock" size={13} color="#4A3525" />{v.pick}</span>
         </div>
       );
