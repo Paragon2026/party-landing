@@ -273,7 +273,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 .sv-strong { font-size: 14px; font-weight: 700; color: var(--text); }
 .sv-meta { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--muted); }
-.sv-ticket { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border: 1.5px dashed var(--gold); border-radius: 10px; background: var(--bg); }
+.sv-join { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; }
 .sv-choice { display: flex; flex-direction: column; gap: 6px; width: 100%; }
 .sv-choice span {
   display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px;

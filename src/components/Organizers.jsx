@@ -5,7 +5,7 @@ import { Icon } from './Icons';
 import { KIND_ICONS } from './Communities';
 import { ModeSwitch } from './ModeSwitch';
 
-const TOOL_ICONS = ['fileText', 'qrCode', 'calendarDays', 'handshake', 'userCheck', 'barChart'];
+const TOOL_ICONS = ['fileText', 'doorOpen', 'calendarDays', 'handshake', 'userCheck', 'barChart'];
 
 /** For the people who run a community, drawn in the app's theme-steward. */
 export function Organizers() {
