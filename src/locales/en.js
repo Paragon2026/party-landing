@@ -15,28 +15,16 @@ export const en = {
   "hero": {
     "eyebrow": "Tabletop role-playing, in person",
     "title": "A table near you",
-    "lead": "Find a game, settle the time and the place with the group, then play. Or take a seat at a game night run by an association, a game bar or a convention near you.",
+    "lead": "Playing online will do in a pinch. But nothing beats a real table, dice rolling and friends across from you.",
     "cta": "Get it on Google Play",
     "proof": [
-      "1,795 communities already on the map",
+      "Hundreds of communities already on the map",
       "Themes and limits announced on every listing",
       "Coming game nights and conventions in the Agenda"
     ]
   },
   "explorer": {
-    "hint": "Tap Player · GM · Comm., then the tabs",
-    "modes": ["Player", "GM", "Comm."],
-    "tabs": {
-      "games": "Games",
-      "communities": "Communities",
-      "agenda": "Agenda"
-    },
-    "placeholder": {
-      "games": "Search for a game or a GM…",
-      "communities": "Search for a community, city or venue…",
-      "agenda": "Search for a community, city or venue…"
-    },
-    "browseLabel": "Browse",
+    "hint": "Tap Player · GM · Club, then the tabs",
     "player": {
       "games": {
         "eyebrow": "Player mode · Games",
@@ -77,7 +65,7 @@ export const en = {
         ]
       },
       "agenda": {
-        "eyebrow": "Player mode · Agenda",
+        "eyebrow": "Player mode · Rendez-vous",
         "title": "Walk in, sit down, play",
         "lead": "Association game nights, game-bar evenings, conventions: everything happening around you, day by day, with the number of tables already planned.",
         "bullets": [
@@ -211,7 +199,7 @@ export const en = {
     "lead": "Party finds the middle of the group from the places people declared, then suggests the game bars, cafés and associations around it. The group votes.",
     "bullets": [
       [
-        "1,795 communities",
+        "Hundreds of communities",
         "already on the map, with their opening days."
       ],
       [
@@ -364,7 +352,7 @@ export const en = {
       },
       {
         "q": "I run a convention or a bar: how do I sign up?",
-        "a": "A venue (bar, shop, games library) lists itself from the app, then goes through verification.\nFor an independent convention, write to the Party team (rqn75j3lc@mozmail.com): we create the event, verify it and hand it over to you.\nYour association may already be among the 1,795 communities on the map: write to us to take it over."
+        "a": "A venue (bar, shop, games library) lists itself from the app, then goes through verification.\nFor an independent convention, write to the Party team (rqn75j3lc@mozmail.com): we create the event, verify it and hand it over to you.\nYour association may already be among the hundreds of communities on the map: write to us to take it over."
       },
       {
         "q": "How do themes and limits work?",

@@ -20,7 +20,7 @@ function StepVisual({ index, v }) {
     case 1:
       return (
         <div className="sv-choice">
-          <span className="is-on"><Icon name="check" size={13} color="#FFFFFF" />{v.whole}</span>
+          <span className="is-on"><Icon name="check" size={13} color="#6E1212" />{v.whole}</span>
           <span><Icon name="clock" size={13} color="#4A3525" />{v.pick}</span>
         </div>
       );

@@ -15,28 +15,16 @@ export const fr = {
   "hero": {
     "eyebrow": "Jeu de rôle sur table, en vrai",
     "title": "Une table près de chez vous",
-    "lead": "Trouvez une partie, fixez le créneau et le lieu avec le groupe, puis jouez. Ou prenez place à la soirée d’une association, d’un bar à jeux ou d’une convention près de chez vous.",
+    "lead": "Jouer en ligne, ça dépanne. Mais rien ne vaut une vraie table, des dés qui roulent et des amis en face.",
     "cta": "Disponible sur Google Play",
     "proof": [
-      "1 795 communautés déjà sur la carte",
+      "Des centaines de communautés déjà sur la carte",
       "Thèmes et limites annoncés sur chaque fiche",
       "Soirées et conventions à venir dans l’Agenda"
     ]
   },
   "explorer": {
-    "hint": "Touchez Joueur · MJ · Comm., puis les onglets",
-    "modes": ["Joueur", "MJ", "Comm."],
-    "tabs": {
-      "games": "Parties",
-      "communities": "Communautés",
-      "agenda": "Agenda"
-    },
-    "placeholder": {
-      "games": "Rechercher une partie ou un MJ…",
-      "communities": "Rechercher une communauté, une ville ou un lieu…",
-      "agenda": "Rechercher une communauté, une ville ou un lieu…"
-    },
-    "browseLabel": "Parcourir",
+    "hint": "Touchez Joueur · MJ · Commu, puis les onglets",
     "player": {
       "games": {
         "eyebrow": "Mode Joueur · Parties",
@@ -77,7 +65,7 @@ export const fr = {
         ]
       },
       "agenda": {
-        "eyebrow": "Mode Joueur · Agenda",
+        "eyebrow": "Mode Joueur · Rendez-vous",
         "title": "Arrivez les pieds sous la table",
         "lead": "Les soirées des associations et des bars à jeux, les conventions : tout ce qui se passe autour de vous, jour par jour, avec le nombre de tables déjà prévues.",
         "bullets": [
@@ -211,7 +199,7 @@ export const fr = {
     "lead": "Party calcule le milieu du groupe à partir des lieux déclarés, puis propose les bars à jeux, cafés et associations autour. Le groupe vote.",
     "bullets": [
       [
-        "1 795 communautés",
+        "Des centaines de communautés",
         "déjà placées sur la carte, avec leurs jours d’ouverture."
       ],
       [
@@ -364,7 +352,7 @@ export const fr = {
       },
       {
         "q": "J’organise une convention, je tiens un bar : comment m’inscrire ?",
-        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (rqn75j3lc@mozmail.com) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les 1 795 communautés sur la carte : écrivez-nous pour en prendre la gestion."
+        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (rqn75j3lc@mozmail.com) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les centaines de communautés sur la carte : écrivez-nous pour en prendre la gestion."
       },
       {
         "q": "Comment fonctionnent les thèmes et les limites ?",
