@@ -338,7 +338,7 @@ export const fr = {
     "venueCta": "Disponible sur Google Play",
     "otherText": "Une association ou une convention ? Écrivez-nous : nous créons ou vous confions sa fiche, et nous la vérifions.",
     "otherCta": "Écrire à l’équipe Party",
-    "contact": "rqn75j3lc@mozmail.com"
+    "contact": "contact@findyour.party"
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -354,7 +354,7 @@ export const fr = {
       },
       {
         "q": "J’organise une convention, je tiens un bar : comment m’inscrire ?",
-        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (rqn75j3lc@mozmail.com) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les centaines de communautés sur la carte : écrivez-nous pour en prendre la gestion."
+        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (contact@findyour.party) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les centaines de communautés sur la carte : écrivez-nous pour en prendre la gestion."
       },
       {
         "q": "Comment fonctionnent les thèmes et les limites ?",
