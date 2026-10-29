@@ -17,7 +17,7 @@ export function AppHeader({ mode, labels, aria, onMode, threeModes = true }) {
   const idx = Math.max(0, ids.indexOf(mode));
   return (
     <div className="ph-header">
-      <img className="ph-logo" src="/logo-128.png" alt="" width="28" height="28" />
+      <img className="ph-logo" src={`${import.meta.env.BASE_URL}logo-128.png`} alt="" width="28" height="28" />
       <div className="ph-header__right">
         <div className="ph-switch" role="group" aria-label={aria.mode}>
           <span className="ph-switch__thumb" aria-hidden="true"
