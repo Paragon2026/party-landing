@@ -6,8 +6,8 @@ export function Logo({ size = 40, wordmark = true, href = '#top' }) {
     <a className="logo" href={href} aria-label="Party">
       <img
         className="logo-mark"
-        src="/logo-128.png"
-        srcSet="/logo-128.png 128w, /logo-256.png 256w"
+        src={`${import.meta.env.BASE_URL}logo-128.png`}
+        srcSet={`${import.meta.env.BASE_URL}logo-128.png 128w, ${import.meta.env.BASE_URL}logo-256.png 256w`}
         sizes={`${size}px`}
         alt=""
         width={size}
