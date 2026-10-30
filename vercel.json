@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "party-landing-eight.vercel.app" }],
+      "destination": "https://findyour.party/landing",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/landing", "destination": "/" },
     { "source": "/landing/", "destination": "/" },
