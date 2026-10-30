@@ -9,3 +9,6 @@ export const LEGAL_URLS = {
   guidelines: `${LEGAL}/community-guidelines`,
   deletion: `${LEGAL}/account-deletion-policy`,
 };
+
+// The app itself, on the web: without an account it opens on « Découvrir sans compte ».
+export const WEB_APP_URL = 'https://findyour.party/';

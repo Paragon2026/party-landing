@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from '../context/LanguageContext';
 import { Icon } from './Icons';
 
-export const KIND_ICONS = { association: 'landmark', venue: 'store', event: 'calendarDays' };
+export const KIND_ICONS = { association: 'landmark', venue: 'store', event: 'calendarDays', online: 'globe' };
 
 // One small illustration per convention step, drawn with the app's parchment tokens.
 function StepVisual({ index, v }) {

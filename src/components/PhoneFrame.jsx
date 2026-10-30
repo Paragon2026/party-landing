@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from '../context/LanguageContext';
 import { PHONE } from '../phone/content';
-import { ChatScreen, MeetingScreen, PlanningScreen } from '../phone/screens';
+import { ChatScreen, CommunityPageScreen, MeetingScreen, PlanningScreen, SessionsScreen } from '../phone/screens';
 
 // A table's conversation in the app (Messages ▸ the table), on the player
-// theme. The clickable phone is Explorer.jsx.
-const SCREENS = { planning: PlanningScreen, meeting: MeetingScreen, chat: ChatScreen };
+// theme, and a community's page. The clickable phone is Explorer.jsx.
+const SCREENS = { planning: PlanningScreen, sessions: SessionsScreen, meeting: MeetingScreen, chat: ChatScreen, community: CommunityPageScreen };
 
 const OUTER_W = 418; // 390 screen + 12 padding + 2 border, each side
 

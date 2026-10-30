@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from '../context/LanguageContext';
-import { PLAY_STORE_URL } from '../links';
+import { PLAY_STORE_URL, WEB_APP_URL } from '../links';
 import { Icon } from './Icons';
 import { Logo } from './Logo';
 
@@ -16,6 +16,10 @@ export function FinalCta() {
         <a className="btn btn--gold" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
           <Icon name="play" size={20} color="#1C140E" />
           <span>{t.cta}</span>
+        </a>
+        <a className="web-link" href={WEB_APP_URL} target="_blank" rel="noreferrer">
+          <span>{t.web}</span>
+          <Icon name="arrowRight" size={16} color="currentColor" />
         </a>
       </div>
     </section>
