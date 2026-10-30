@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from '../context/LanguageContext';
-import { PLAY_STORE_URL } from '../links';
+import { PLAY_STORE_URL, WEB_APP_URL } from '../links';
 import { Icon } from './Icons';
 
-const PROOF_ICONS = ['pin', 'shield', 'calendarDays'];
+const PROOF_ICONS = ['pin', 'shield', 'calendarCheck'];
 
 /** Centred, without a phone: the interactive phone right below is the hero's visual. */
 export function Hero() {
@@ -21,6 +21,10 @@ export function Hero() {
             <span>{t.cta}</span>
           </a>
         </div>
+        <a className="web-link" href={WEB_APP_URL} target="_blank" rel="noreferrer">
+          <span>{t.web}</span>
+          <Icon name="arrowRight" size={16} color="currentColor" />
+        </a>
         <div className="proof">
           {t.proof.map((line, i) => (
             <div key={line} className="proof-item">

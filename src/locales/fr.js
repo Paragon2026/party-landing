@@ -1,14 +1,14 @@
 export const fr = {
   "meta": {
     "title": "Party — Une table de jeu de rôle près de chez vous",
-    "description": "Trouvez une partie de jeu de rôle sur table près de chez vous, ou une place à la soirée d’une association, d’un bar à jeux ou d’une convention. Système, places, ambiance et thèmes annoncés avant de postuler."
+    "description": "Trouvez une partie de jeu de rôle sur table près de chez vous ou en ligne, rejoignez les clubs, lieux et conventions de votre ville, et laissez Party caler les séances. Gratuit, dès 16 ans."
   },
   "nav": {
     "explorer": "L’app",
-    "planning": "Planning",
-    "meeting": "Rendez-vous",
+    "planning": "Séances",
     "communities": "Communautés",
     "gm": "Pour les MJ",
+    "organizers": "Organisateurs",
     "faq": "FAQ",
     "download": "Télécharger"
   },
@@ -17,108 +17,75 @@ export const fr = {
     "title": "Une table près de chez vous",
     "lead": "Jouer en ligne, ça dépanne. Mais rien ne vaut une vraie table, des dés qui roulent et des amis en face.",
     "cta": "Disponible sur Google Play",
+    "web": "Ou jetez un œil sans compte, dans votre navigateur",
     "proof": [
       "Des centaines de communautés déjà sur la carte",
       "Thèmes et limites annoncés sur chaque fiche",
-      "Soirées et conventions à venir, jour par jour"
+      "Les tables qui tombent quand vous êtes libre"
     ]
   },
   "explorer": {
-    "hint": "Touchez Joueur · MJ · Commu, puis les onglets",
+    "hint": "Touchez Joueur · MJ, puis Parties · Communautés",
     "player": {
       "games": {
         "eyebrow": "Mode Joueur · Parties",
         "title": "Trouvez votre table",
-        "lead": "Les parties autour de vous, avec tout ce qu’il faut savoir avant de postuler.",
+        "lead": "Une ligne par table : le jeu, la distance, les places libres. Touchez-la pour tout voir, puis demandez à rejoindre.",
         "bullets": [
           [
-            "Tout est annoncé :",
-            "système, places, niveau, fréquence et thèmes abordés."
+            "Où, quand, pour qui :",
+            "trois questions dans Filtres. Les tables qui tombent quand vous êtes libre passent en premier."
           ],
           [
-            "Autour de vous :",
-            "les parties proches, triées par distance."
+            "Les soirées des communautés",
+            "regroupent leurs tables sous leur date."
           ],
           [
-            "Le MJ valide votre demande :",
-            "vous savez qui sera à la table."
+            "Une alerte",
+            "vous prévient quand une nouvelle table correspond à votre recherche. Une table complète ? Suivez-la : vous saurez quand une place se libère."
+          ],
+          [
+            "Dernière minute :",
+            "les tables qui cherchent un remplaçant pour une seule séance."
           ]
         ]
       },
       "communities": {
         "eyebrow": "Mode Joueur · Communautés",
-        "title": "Associations, lieux, conventions",
-        "lead": "Les communautés où le jeu de rôle se passe déjà, près de chez vous : leur fiche, leurs rendez-vous, leurs tables.",
+        "title": "Clubs, lieux, événements, serveurs en ligne",
+        "lead": "Vos communautés en tête, puis celles qui sont autour de vous, triées par distance ou par prochain rendez-vous.",
         "bullets": [
           [
             "Rejoignez-les",
-            "en un geste si elles sont ouvertes, sinon sur demande."
+            "en un geste si elles acceptent toutes les demandes, sinon leur équipe valide la vôtre."
           ],
           [
-            "Leurs tables",
-            "vous sont réservées, en tant que membre ou participant."
-          ],
-          [
-            "Leurs canaux",
-            "complètent votre Discord : on discute en ligne, on se voit en vrai."
-          ]
-        ]
-      },
-      "agenda": {
-        "eyebrow": "Mode Joueur · Rendez-vous",
-        "title": "Arrivez les pieds sous la table",
-        "lead": "Les soirées des associations et des bars à jeux, les conventions : tout ce qui se passe autour de vous, jour par jour, avec le nombre de tables déjà prévues.",
-        "bullets": [
-          [
-            "Personnalisez vos rendez-vous :",
-            "rejoignez des communautés pour voir les soirées et événements qu’elles proposent."
-          ],
-          [
-            "Des tables réservées :",
-            "aux participants de la soirée ou de la convention."
+            "Leurs tables et leur salon :",
+            "certaines tables sont réservées aux membres, et le salon sert à discuter entre deux soirées."
           ],
           [
             "« J’y serai » :",
-            "les MJ voient combien de joueurs viennent, et à quelle heure."
+            "dites à quelles soirées vous venez, et à quelle heure."
           ]
         ]
       }
     },
     "gm": {
-      "eyebrow": "Mode MJ",
-      "title": "Vos tables, là où sont les joueurs",
-      "lead": "Vos parties, les demandes, la séance à démarrer. Et les soirées ou les conventions où poser une table.",
+      "eyebrow": "Mode MJ · Proposer",
+      "title": "Où jouerez-vous ?",
+      "lead": "Proposer une table commence par cette question : une table libre, ou chez une communauté, à l’un de ses rendez-vous si vous le voulez.",
       "bullets": [
         [
-          "Une table rattachée à une soirée",
-          "est réservée à ses membres, qui sont prévenus."
+          "Table libre :",
+          "chez vous, en ligne ou dans le lieu de votre choix. Chez vous, les joueurs voient un cercle déplacé au hasard, jamais votre adresse."
         ],
         [
-          "La présence heure par heure",
-          "vous dit combien de joueurs seront là."
+          "Chez une communauté :",
+          "pas encore membre ? Rejoignez-la sans quitter l’écran."
         ],
         [
-          "Partenaire d’une convention ?",
-          "« Proposer une table ici », directement sur son rendez-vous."
-        ]
-      ]
-    },
-    "community": {
-      "eyebrow": "Mode Communauté",
-      "title": "L’espace des organisateurs",
-      "lead": "Pour les responsables d’une association, d’un lieu ou d’une convention : un mode à part, avec son propre thème.",
-      "bullets": [
-        [
-          "Votre fiche et votre adhésion :",
-          "description, horaires, Discord ; ouverte à tous ou sur acceptation."
-        ],
-        [
-          "Vos rendez-vous,",
-          "ponctuels ou récurrents, avec leurs tables et leurs participants."
-        ],
-        [
-          "Partenariats, membres, modération :",
-          "tout se règle depuis ce mode."
+          "Sur un rendez-vous,",
+          "le lieu et l’horaire viennent de la soirée, et la table est réservée à ses membres."
         ]
       ]
     }
@@ -126,26 +93,30 @@ export const fr = {
   "communities": {
     "eyebrow": "Communautés",
     "title": "Là où le jeu de rôle se passe déjà",
-    "lead": "Party ne remplace pas votre association, votre bar ou votre convention : il les remplit de tables. Les communautés sont sur la carte, leurs rendez-vous jour par jour, leurs tables dans l’app.",
+    "lead": "Party ne remplace pas votre club, votre bar ou votre convention : il les remplit de tables. Les communautés sont sur la carte, leurs soirées dans Explorer, leurs tables dans l’app.",
     "kinds": {
       "association": {
-        "label": "Association",
-        "text": "Le club de la ville, l’asso étudiante : soirées régulières, membres, canaux de discussion."
+        "label": "Club",
+        "text": "L’asso de la ville, le club étudiant, le groupe qui joue chaque semaine : ses soirées, ses membres, son salon."
       },
       "venue": {
         "label": "Lieu",
-        "text": "Bar à jeux, boutique, ludothèque : son pin sur la carte, ses soirées, et celles des autres qu’il accueille."
+        "text": "Bar à jeux, boutique, ludothèque : son pin sur la carte, ses horaires, et les soirées qu’il accueille."
       },
       "event": {
         "label": "Événement",
-        "text": "Convention, salon, festival : ses dates, ses tables réservées aux participants, ses associations partenaires."
+        "text": "Convention, festival : ses dates, ses tables réservées aux participants, ses clubs et lieux partenaires."
+      },
+      "online": {
+        "label": "En ligne",
+        "text": "Un serveur Discord ou un autre réseau : ses tables en ligne, et son lien d’invitation en guise d’adresse."
       }
     },
     "stepsTitle": "À la convention, en quatre temps",
     "steps": [
       {
         "title": "Rejoignez l’événement",
-        "text": "Depuis sa fiche, dans les Rendez-vous ou l’annuaire : en un geste s’il est ouvert, sinon l’organisateur accepte votre demande."
+        "text": "Depuis Explorer, parmi les soirées ou dans Communautés : en un geste s’il accepte toutes les demandes, sinon son équipe valide la vôtre."
       },
       {
         "title": "Dites quand vous voulez jouer",
@@ -153,7 +124,7 @@ export const fr = {
       },
       {
         "title": "Les tables apparaissent",
-        "text": "Proposées par les MJ de la convention et de ses associations partenaires, réservées aux participants."
+        "text": "Proposées par les MJ de la convention et de ses partenaires, réservées aux participants."
       },
       {
         "title": "Postulez, et venez jouer",
@@ -162,47 +133,70 @@ export const fr = {
     ],
     "visuals": {
       "event": "Les Rencontres de Brumeval",
-      "eventMeta": "Événement vérifié · 17 – 18 oct.",
-      "join": "Rejoindre l’événement",
+      "eventMeta": "Événement vérifié · 14 – 15 nov.",
+      "join": "Rejoindre",
       "whole": "Toute la durée",
       "pick": "Choisir mes heures",
       "table": "Le Bal des Masques de Suie",
       "tableMeta": "Sam. 14:00 · 3/5 joueurs",
-      "reserved": "Réservée aux participants",
+      "reserved": "Réservée aux membres",
       "apply": "Demander à rejoindre",
       "applyMeta": "Validation par le MJ"
     },
     "noteTicket": "Sans compte, la convention et ses rendez-vous restent visibles ; ses tables s’ouvrent à ses participants. Party ne vend pas de billets.",
-    "noteAge": "Rejoindre une communauté, discuter dans ses canaux et postuler à ses tables : 18 ans et plus.",
-    "toOrganizers": "Vous tenez une asso, un lieu ou une convention ? Découvrez le mode Communauté"
+    "noteAge": "Rejoindre une communauté et discuter dans son salon : 18 ans et plus.",
+    "toOrganizers": "Vous tenez un club, un lieu ou un événement ? Ajoutez-le, et gérez-le depuis sa page"
   },
   "planning": {
     "eyebrow": "Le planificateur",
     "title": "Fini les sondages sans fin",
-    "lead": "Chacun rentre ses disponibilités sur la grille de la semaine. Party calcule le créneau où tout le monde est libre et ouvre le vote.",
+    "lead": "Chacun remplit sa semaine type une fois. Party trouve les créneaux où toute la table est libre et ouvre le vote.",
     "bullets": [
       [
         "Trois états :",
-        "disponible, flexible, occupé — par tranche d’une heure."
+        "disponible, flexible, occupé, heure par heure. Vos absences et les créneaux occupés de votre agenda (Google, Apple, Outlook) s’y ajoutent, sans leurs titres."
       ],
       [
-        "Le créneau commun sort tout seul,",
-        "avec le nombre de joueurs libres."
+        "Toute la table compte :",
+        "le vote attend que chacun ait indiqué ses disponibilités, et un rappel part en un geste."
       ],
       [
         "Un vote, une séance.",
-        "Le créneau retenu bloque la case dans les disponibilités de chacun."
+        "Le créneau retenu bloque la case dans les disponibilités de chacun, et rejoint l’agenda du téléphone."
+      ]
+    ]
+  },
+  "sessions": {
+    "eyebrow": "Chaque séance",
+    "title": "Qui vient ? Toute la table le sait",
+    "lead": "Pour chaque date, chaque joueur dit s’il sera là. Le MJ voit d’un coup d’œil qui vient, et la table aussi.",
+    "bullets": [
+      [
+        "« Je serai là » ou « Je ne pourrai pas » :",
+        "un geste par date, et le compte des réponses pour toute la table."
+      ],
+      [
+        "Une date bouge ?",
+        "Le MJ déplace ou annule une séance, avec un mot : chaque joueur est prévenu."
+      ],
+      [
+        "Un rappel la veille,",
+        "puis le résumé à compléter."
+      ],
+      [
+        "Il manque quelqu’un ?",
+        "Le MJ cherche un remplaçant pour cette séance seulement : ceux qui suivent la table sont prévenus d’abord, puis la date s’affiche dans Explorer."
       ]
     ]
   },
   "meeting": {
     "eyebrow": "Se retrouver en vrai",
     "title": "Un point de rendez-vous équitable",
-    "lead": "Party calcule le milieu du groupe à partir des lieux déclarés, puis propose les bars à jeux, cafés et associations autour. Le groupe vote.",
+    "lead": "Party calcule le milieu du groupe à partir des lieux déclarés, puis propose les bars à jeux, cafés et clubs autour. Le groupe vote.",
     "bullets": [
       [
         "Des centaines de communautés",
-        "déjà placées sur la carte, avec leurs jours d’ouverture."
+        "déjà placées sur la carte, avec leurs jours de réunion."
       ],
       [
         "Les adresses restent privées :",
@@ -210,33 +204,33 @@ export const fr = {
       ],
       [
         "Le lieu retenu",
-        "s’affiche dans le salon de la campagne."
+        "s’affiche dans le salon de la table."
       ]
     ]
   },
   "chat": {
     "eyebrow": "Votre table a son salon",
     "title": "Parlez avant, pendant, après",
-    "lead": "Chaque campagne a sa discussion de groupe, ses messages privés et ses résumés de séance, gravés par le MJ.",
+    "lead": "Chaque table a sa discussion, sa planification et son résumé de séance, écrit à plusieurs.",
     "bullets": [
       [
         "Chat de la table",
         "avec le sondage de créneau et le vote du lieu intégrés."
       ],
       [
-        "Résumés de séance",
-        "à relire avant la suivante — plus de « on en était où ? »."
+        "Un résumé écrit ensemble :",
+        "toute la table le complète en direct, puis le MJ le grave. Plus de « on en était où ? »."
       ],
       [
-        "Panneau sécurité",
-        "pour demander de poser une limite au MJ, anonymement."
+        "Demande anonyme au MJ",
+        "pour ajouter une ligne ou un voile, sans que la table le sache."
       ]
     ]
   },
   "safety": {
     "eyebrow": "Avant de postuler",
     "title": "Les thèmes sont annoncés, les limites garanties",
-    "lead": "Sur chaque fiche, le MJ indique ce que la partie peut aborder et ce qu’il garantit hors de la table. Vous tenez votre propre liste de sujets à éviter : les parties qui en annoncent un n’apparaissent pas dans votre recherche.",
+    "lead": "Sur chaque fiche, le MJ indique ce que la partie peut aborder et ce qu’il garantit hors de la table. Vous tenez votre propre liste de lignes et de voiles : les parties qui en touchent une sont masquées, et Explorer vous dit combien.",
     "bullets": [
       [
         "Filtre déclaratif :",
@@ -247,8 +241,8 @@ export const fr = {
         "le MJ accepte ou refuse, la table n’en sait rien."
       ],
       [
-        "Valable en ligne comme en présentiel.",
-        ""
+        "Jamais d’adresse :",
+        "une partie chez un particulier s’affiche comme un cercle déplacé au hasard."
       ]
     ],
     "cardTitle": "Les Cryptes de Vaudrac",
@@ -267,98 +261,130 @@ export const fr = {
   "gm": {
     "eyebrow": "Pour les MJ",
     "title": "Changez de mode d’un geste",
-    "lead": "Le même compte, trois façons d’utiliser Party. Passez de joueur à MJ quand vous voulez ; le mode Communauté s’ajoute si vous tenez une association, un lieu ou une convention.",
+    "lead": "Le même compte, deux façons d’utiliser Party : Joueur pour trouver une table, MJ pour proposer et mener les vôtres. Chaque mode a ses onglets, ses messages et son thème.",
     "modes": [
       "Joueur",
-      "MJ",
-      "Communauté"
+      "MJ"
     ],
-    "modesTitle": "Un compte, trois modes",
-    "modesText": "Joueur et MJ pour tout le monde ; Communauté pour les responsables. Vos campagnes de joueur et celles que vous menez restent séparées.",
+    "modesTitle": "Un compte, deux modes",
+    "modesText": "Vos tables de joueur et celles que vous menez restent séparées. Une communauté, elle, se gère depuis sa page.",
     "tablesTitle": "Des tables sur les soirées et les conventions",
-    "tablesText": "Rattachez une table à une soirée ou à une convention : elle devient exclusive à ses participants, qui sont prévenus. La présence heure par heure vous dit quand ils seront là.",
-    "presenceLabel": "Présence · ven. 16 oct. · jusqu’à 14 en même temps"
+    "tablesText": "Rattachez une table à une soirée ou à une convention : elle devient réservée à ses membres, qui sont prévenus. La présence heure par heure vous dit quand ils seront là.",
+    "presenceLabel": "Présence · ven. 6 nov. · jusqu’à 14 en même temps",
+    "pageTitle": "Votre page de MJ",
+    "pageText": "Si vous le voulez, les membres qui ouvrent votre profil voient les tables que vous menez et avez menées, et les avis de vos joueurs. Jamais le lieu d’une table.",
+    "pageCard": {
+      "name": "Elena",
+      "role": "Comme MJ",
+      "rating": "4,8 · 12 avis",
+      "stats": "9 tables menées",
+      "systems": [
+        "Pathfinder 2e",
+        "L’Appel de Cthulhu"
+      ]
+    }
   },
   "organizers": {
-    "modes": [
-      "Joueur",
-      "MJ",
-      "Communauté"
-    ],
-    "eyebrow": "Mode Communauté · pour les organisateurs",
+    "eyebrow": "Pour les organisateurs",
     "title": "Votre communauté, pleine de tables",
-    "lead": "Associations, bars à jeux, boutiques, conventions : un espace de gestion dans l’app, avec son propre thème. Vous gardez vos habitudes et votre Discord ; Party rend vos soirées visibles et vous aide à les organiser.",
+    "lead": "Clubs, bars à jeux, boutiques, conventions, serveurs en ligne : votre communauté a sa page dans l’app. Vos membres y trouvent l’accueil, le salon et la liste des membres ; votre équipe, en plus, l’onglet Gérer. Vous gardez vos habitudes et votre Discord.",
     "kinds": {
       "association": {
-        "label": "Association",
+        "label": "Club",
         "title": "Vos soirées, vos membres",
-        "text": "Vos soirées régulières dans les Rendez-vous, vos membres et leurs demandes, vos canaux. Vos MJ rattachent leurs tables à la soirée : elles sont réservées aux membres."
+        "text": "Vos soirées régulières dans Explorer, vos membres et leurs demandes, votre salon. Vos MJ rattachent leurs tables à la soirée : elles sont réservées aux membres."
       },
       "venue": {
         "label": "Lieu",
         "title": "Votre pin sur la carte",
-        "text": "Bar, boutique, ludothèque : référencez-vous vous-même. Votre pin sur la carte, vos soirées dédiées, et vos habitués qui y proposent leurs tables."
+        "text": "Bar, boutique, ludothèque : vos horaires, vos soirées, et vos habitués qui y proposent leurs tables."
       },
       "event": {
         "label": "Événement",
         "title": "Vos tables, pour vos participants",
-        "text": "Convention, salon, festival : vos dates, des tables réservées aux participants, et les associations partenaires qui en proposent."
+        "text": "Convention, festival : vos dates, des tables réservées aux participants, et les clubs partenaires qui en proposent."
+      },
+      "online": {
+        "label": "En ligne",
+        "title": "Votre serveur, ses tables",
+        "text": "Discord ou un autre réseau : votre lien d’invitation tient lieu d’adresse, vos MJ y proposent leurs tables en ligne."
       }
     },
-    "toolsTitle": "Tout se gère depuis l’app",
+    "toolsTitle": "L’onglet Gérer",
     "tools": [
       [
-        "Votre fiche",
-        "Description, adresse, horaires, Discord, contact vérifié."
+        "Demandes",
+        "Acceptez, ou refusez avec un motif envoyé à la personne. Ou tout accepter d’un geste."
       ],
       [
-        "Adhésion",
-        "Ouverte à tous ou sur acceptation : vous choisissez, vos officiers valident les demandes."
+        "Règle d’adhésion",
+        "Accepter toutes les demandes, ou validation obligatoire par votre équipe."
+      ],
+      [
+        "Fiche",
+        "Nom, description, lieu, horaires, liens et Discord."
       ],
       [
         "Rendez-vous",
-        "Ponctuels ou récurrents. Annulez une date, dupliquez pour l’édition suivante."
+        "Ponctuels ou récurrents. Créez, dupliquez, annulez une date ; la présence heure par heure, sans les noms."
+      ],
+      [
+        "Tables",
+        "Celles que vos MJ ont rattachées à votre communauté."
+      ],
+      [
+        "Membres et rôles",
+        "Propriétaire, équipe, membres."
       ],
       [
         "Partenariats",
-        "Une association et une convention se lient : chacune voit les tables de l’autre. Les canaux restent entre membres."
+        "Un club et une convention se lient : les membres de l’un voient les tables de l’autre."
       ],
       [
-        "Membres et modération",
-        "Demandes d’adhésion, rôles, retirer un message ou un membre, sourdine de 24 h, signalements."
-      ],
-      [
-        "Présence",
-        "Combien de participants seront là, heure par heure — le nombre, jamais les noms."
+        "Signalements",
+        "Les messages signalés dans votre salon, traités par votre équipe."
       ]
     ],
-    "ctaTitle": "Référencez votre communauté",
-    "ctaText": "Le mode Communauté apparaît dès que vous êtes responsable d’une communauté sur Party.",
-    "venueText": "Vous tenez un lieu ? Référencez-le vous-même depuis l’app ; nous le vérifions ensuite.",
-    "venueCta": "Disponible sur Google Play",
-    "otherText": "Une association ou une convention ? Écrivez-nous : nous créons ou vous confions sa fiche, et nous la vérifions.",
-    "otherCta": "Écrire à l’équipe Party",
-    "contact": "contact@findyour.party"
+    "ctaTitle": "Ajoutez votre communauté en trois étapes",
+    "ctaText": "Dans l’app : Explorer ▸ Communautés ▸ « Ajouter une communauté ». Son type, son nom et son lieu, puis quand on y joue.",
+    "addText": "Vous la gérez ? Dites-le à la dernière étape : l’équipe Party vous propose un rendez-vous, vérifie la fiche et vous en confie la gestion.",
+    "addCta": "Disponible sur Google Play",
+    "claimText": "Elle est peut-être déjà sur la carte, parmi des centaines de fiches. Ouvrez la sienne et touchez « C’est ma communauté ». Une question ? Écrivez-nous.",
+    "claimCta": "Écrire à l’équipe Party",
+    "contact": "contact@findyour.party",
+    "ageNote": "Gérer une communauté : 18 ans et plus."
   },
   "faq": {
     "eyebrow": "FAQ",
     "title": "Questions fréquentes",
     "items": [
       {
+        "q": "Faut-il un compte ?",
+        "a": "Pas pour découvrir : sans compte, vous parcourez les parties en ligne et les communautés, dans l’app ou sur findyour.party.\nPour voir les parties près de chez vous, rejoindre une table ou écrire à quelqu’un, créez un compte. C’est gratuit."
+      },
+      {
+        "q": "À partir de quel âge ?",
+        "a": "16 ans. Avant 18 ans : les parties en ligne, et sur place celles qui se jouent dans un lieu public ouvert aux 16–17 ans.\nLes communautés et toutes les autres parties : 18 ans et plus."
+      },
+      {
         "q": "Qu’est-ce qu’une communauté sur Party ?",
-        "a": "Un endroit où le jeu de rôle se passe en vrai : une association, un lieu (bar à jeux, boutique, ludothèque) ou un événement (convention, salon, festival). Chacune a sa fiche, ses rendez-vous et ses tables, réservées à ses membres.\nL’annuaire et les rendez-vous se consultent librement. Rejoindre une communauté, discuter dans ses canaux et postuler à ses tables : 18 ans et plus."
+        "a": "Un endroit où le jeu de rôle se passe déjà : un club, un lieu (bar à jeux, boutique, ludothèque), un événement (convention, festival) ou un serveur en ligne. Chacune a sa page, ses rendez-vous, son salon et ses tables, parfois réservées à ses membres."
       },
       {
         "q": "Comment rejoindre une convention ?",
-        "a": "Ouvrez sa fiche depuis les Rendez-vous ou l’annuaire et rejoignez-la : en un geste si elle est ouverte, sinon l’organisateur accepte votre demande. Dites ensuite quand vous voulez jouer avec « J’y serai » : les tables de l’événement s’ouvrent à vous.\nParty ne vend pas de billets : l’entrée de la convention se règle avec ses organisateurs."
+        "a": "Retrouvez-la dans Explorer, parmi les soirées ou dans Communautés, et rejoignez-la : en un geste si elle accepte toutes les demandes, sinon son équipe valide la vôtre. Dites ensuite quand vous serez là avec « J’y serai » : ses tables s’ouvrent à vous.\nParty ne vend pas de billets : l’entrée se règle avec les organisateurs."
       },
       {
         "q": "J’organise une convention, je tiens un bar : comment m’inscrire ?",
-        "a": "Un lieu (bar, boutique, ludothèque) se référence lui-même depuis l’app, puis passe en vérification.\nPour une convention indépendante, écrivez à l’équipe Party (contact@findyour.party) : nous créons l’événement, le vérifions et vous en confions la gestion.\nVotre association est peut-être déjà parmi les centaines de communautés sur la carte : écrivez-nous pour en prendre la gestion."
+        "a": "Ajoutez votre communauté depuis l’app en trois étapes (Explorer ▸ Communautés ▸ « Ajouter une communauté ») et dites que vous la gérez : l’équipe Party vous contacte, puis vérifie la fiche.\nElle est peut-être déjà sur la carte : ouvrez sa fiche et touchez « C’est ma communauté ».\nUne question : contact@findyour.party."
+      },
+      {
+        "q": "Une table me plaît, mais elle est complète.",
+        "a": "Suivez-la : nous vous prévenons dès qu’une place se libère. Vous pouvez aussi enregistrer votre recherche comme alerte : une notification quand une nouvelle table y correspond, au plus une fois par jour."
       },
       {
         "q": "Comment fonctionnent les thèmes et les limites ?",
-        "a": "Le MJ annonce sur sa fiche les thèmes que la partie peut aborder, et ceux qu’il garantit hors de la table. De votre côté, vous tenez une liste des sujets que vous évitez : les parties qui en annoncent un disparaissent de votre recherche. Vous pouvez aussi demander une limite au MJ, anonymement."
+        "a": "Le MJ annonce sur sa fiche les thèmes que la partie peut aborder, et ceux qu’il garantit hors de la table. De votre côté, vous tenez vos lignes (jamais à la table) et vos voiles (en fondu au noir) : les parties qui en touchent une sont masquées de votre recherche. Vous pouvez aussi demander une limite au MJ, anonymement."
       },
       {
         "q": "Quels jeux de rôle sont pris en charge ?",
@@ -368,8 +394,9 @@ export const fr = {
   },
   "final": {
     "title": "Prêt à lancer les dés ?",
-    "lead": "Gratuit sur Android. Trouvez une table, réglez le créneau et le lieu, jouez.",
-    "cta": "Disponible sur Google Play"
+    "lead": "Gratuit sur Android. Trouvez une table, calez la séance, jouez.",
+    "cta": "Disponible sur Google Play",
+    "web": "Ou ouvrez Party dans votre navigateur"
   },
   "footer": {
     "terms": "Conditions d’utilisation",

@@ -3,22 +3,27 @@ import { useTranslation } from '../context/LanguageContext';
 import { PLAY_STORE_URL } from '../links';
 import { Icon } from './Icons';
 import { KIND_ICONS } from './Communities';
-import { ModeSwitch } from './ModeSwitch';
+import { PhoneFrame } from './PhoneFrame';
 
-const TOOL_ICONS = ['fileText', 'doorOpen', 'calendarDays', 'handshake', 'userCheck', 'barChart'];
+// One icon per row of the community page's Manage tab, in its order.
+const TOOL_ICONS = ['userCheck', 'doorOpen', 'idCard', 'calendarDays', 'dice', 'users', 'handshake', 'flag'];
 
-/** For the people who run a community, drawn in the app's theme-steward. */
+/** For the people who run a community: its page and its Manage tab, on the steward palette. */
 export function Organizers() {
   const { loc } = useTranslation();
   const t = loc.organizers;
   return (
     <section id="organisateurs" className="steward">
       <div className="container">
-        <div className="stack section-head section-head--left">
-          <ModeSwitch labels={t.modes} active={2} tone="steward" />
-          <div className="eyebrow">{t.eyebrow}</div>
-          <h2 className="h2 h2--lg">{t.title}</h2>
-          <p className="lead">{t.lead}</p>
+        <div className="split org-head">
+          <div className="stack section-head section-head--left">
+            <div className="eyebrow">{t.eyebrow}</div>
+            <h2 className="h2 h2--lg">{t.title}</h2>
+            <p className="lead">{t.lead}</p>
+          </div>
+          <div className="center">
+            <PhoneFrame screen="community" height={720} />
+          </div>
         </div>
 
         <div className="kinds">
@@ -52,21 +57,22 @@ export function Organizers() {
           </div>
           <div className="org-cta-grid">
             <div className="org-cta-col">
-              <p>{t.venueText}</p>
+              <p>{t.addText}</p>
               <a className="btn btn--gold btn--sm" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
                 <Icon name="play" size={16} color="#1C140E" />
-                <span>{t.venueCta}</span>
+                <span>{t.addCta}</span>
               </a>
             </div>
             <div className="org-cta-col">
-              <p>{t.otherText}</p>
+              <p>{t.claimText}</p>
               <a className="btn btn--wax btn--sm" href={`mailto:${t.contact}`}>
                 <Icon name="mail" size={16} color="#FFF8E7" />
-                <span>{t.otherCta}</span>
+                <span>{t.claimCta}</span>
               </a>
               <a className="org-mail" href={`mailto:${t.contact}`}>{t.contact}</a>
             </div>
           </div>
+          <p className="org-cta-lead">{t.ageNote}</p>
         </div>
       </div>
     </section>

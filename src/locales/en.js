@@ -1,14 +1,14 @@
 export const en = {
   "meta": {
     "title": "Party — A tabletop RPG table near you",
-    "description": "Find a tabletop RPG game near you, or a seat at a game night run by an association, a game bar or a convention. System, seats, tone and themes are announced before you apply."
+    "description": "Find a tabletop RPG game near you or online, join the clubs, venues and conventions in your town, and let Party sort out the sessions. Free, from age 16."
   },
   "nav": {
     "explorer": "The app",
-    "planning": "Scheduling",
-    "meeting": "Meeting point",
+    "planning": "Sessions",
     "communities": "Communities",
     "gm": "For GMs",
+    "organizers": "Organisers",
     "faq": "FAQ",
     "download": "Download"
   },
@@ -17,108 +17,75 @@ export const en = {
     "title": "A table near you",
     "lead": "Playing online will do in a pinch. But nothing beats a real table, dice rolling and friends across from you.",
     "cta": "Get it on Google Play",
+    "web": "Or have a look without an account, in your browser",
     "proof": [
       "Hundreds of communities already on the map",
       "Themes and limits announced on every listing",
-      "Coming game nights and conventions, day by day"
+      "The tables that fall when you are free"
     ]
   },
   "explorer": {
-    "hint": "Tap Player · GM · Club, then the tabs",
+    "hint": "Tap Player · GM, then Games · Communities",
     "player": {
       "games": {
         "eyebrow": "Player mode · Games",
         "title": "Find your table",
-        "lead": "The games around you, with everything you need to know before you apply.",
+        "lead": "One line per table: the game, the distance, the seats left. Tap it to see everything, then ask to join.",
         "bullets": [
           [
-            "Everything is announced:",
-            "system, seats, level, frequency and themes."
+            "Where, when, for whom:",
+            "three questions in Filters. The tables that fall when you are free come first."
           ],
           [
-            "Around you:",
-            "nearby games, sorted by distance."
+            "Community nights",
+            "gather their tables under their date."
           ],
           [
-            "The GM approves your request:",
-            "you know who’ll be at the table."
+            "An alert",
+            "tells you when a new table matches your search. A full table? Follow it: you’ll know when a seat frees up."
+          ],
+          [
+            "Last minute:",
+            "the tables looking for a stand-in for a single session."
           ]
         ]
       },
       "communities": {
         "eyebrow": "Player mode · Communities",
-        "title": "Associations, venues, conventions",
-        "lead": "The communities where role-playing already happens, near you: their listing, their rendez-vous, their tables.",
+        "title": "Clubs, venues, events, online servers",
+        "lead": "Your communities first, then the ones around you, sorted by distance or by next rendez-vous.",
         "bullets": [
           [
             "Join them",
-            "in one tap when they’re open, otherwise on request."
+            "in one tap when they accept every request, otherwise their team approves yours."
           ],
           [
-            "Their tables",
-            "are reserved for you as a member or attendee."
-          ],
-          [
-            "Their channels",
-            "work alongside your Discord: talk online, meet in person."
-          ]
-        ]
-      },
-      "agenda": {
-        "eyebrow": "Player mode · Rendez-vous",
-        "title": "Walk in, sit down, play",
-        "lead": "Association game nights, game-bar evenings, conventions: everything happening around you, day by day, with the number of tables already planned.",
-        "bullets": [
-          [
-            "Make your rendez-vous yours:",
-            "join communities to see the game nights and events they run."
-          ],
-          [
-            "Reserved tables:",
-            "for the attendees of the game night or convention."
+            "Their tables and their room:",
+            "some tables are for members only, and the room is where you talk between nights."
           ],
           [
             "“I’ll be there”:",
-            "GMs see how many players are coming, and when."
+            "say which nights you’re coming to, and at what time."
           ]
         ]
       }
     },
     "gm": {
-      "eyebrow": "GM mode",
-      "title": "Your tables, where the players are",
-      "lead": "Your games, the requests, the session to start. And the game nights or conventions to put a table on.",
+      "eyebrow": "GM mode · Host",
+      "title": "Where will you play?",
+      "lead": "Proposing a table starts with that question: a free table, or at a community, on one of its rendez-vous if you like.",
       "bullets": [
         [
-          "A table attached to a game night",
-          "is reserved for its members, who get notified."
+          "Free table:",
+          "at home, online or in a place of your choice. At home, players see a circle moved at random, never your address."
         ],
         [
-          "Hour-by-hour attendance",
-          "tells you how many players will be there."
+          "At a community:",
+          "not a member yet? Join it without leaving the screen."
         ],
         [
-          "Partnering with a convention?",
-          "“Propose a table here”, right on its rendez-vous."
-        ]
-      ]
-    },
-    "community": {
-      "eyebrow": "Community mode",
-      "title": "The organisers’ space",
-      "lead": "For the people running an association, a venue or a convention: a mode of its own, with its own theme.",
-      "bullets": [
-        [
-          "Your listing and join policy:",
-          "description, hours, Discord; open to all or on approval."
-        ],
-        [
-          "Your rendez-vous,",
-          "one-off or recurring, with their tables and attendees."
-        ],
-        [
-          "Partnerships, members, moderation:",
-          "all handled from this mode."
+          "On a rendez-vous,",
+          "the place and time come from the night, and the table is for its members."
         ]
       ]
     }
@@ -126,34 +93,38 @@ export const en = {
   "communities": {
     "eyebrow": "Communities",
     "title": "Where role-playing already happens",
-    "lead": "Party doesn’t replace your association, your bar or your convention — it fills them with tables. Communities are on the map, their rendez-vous day by day, their tables in the app.",
+    "lead": "Party doesn’t replace your club, your bar or your convention: it fills them with tables. Communities are on the map, their nights in Explore, their tables in the app.",
     "kinds": {
       "association": {
-        "label": "Association",
-        "text": "The town club, the student society: regular game nights, members, discussion channels."
+        "label": "Club",
+        "text": "The town’s association, the student club, the group that plays every week: its nights, its members, its room."
       },
       "venue": {
         "label": "Venue",
-        "text": "Game bar, shop, games library: its pin on the map, its own nights, and the ones it hosts."
+        "text": "Game bar, shop, games library: its pin on the map, its opening hours, and the nights it hosts."
       },
       "event": {
         "label": "Event",
-        "text": "Convention, fair, festival: its dates, tables reserved for attendees, its partner associations."
+        "text": "Convention, festival: its dates, its tables reserved for attendees, its partner clubs and venues."
+      },
+      "online": {
+        "label": "Online",
+        "text": "A Discord server or another network: its online tables, and its invite link instead of an address."
       }
     },
     "stepsTitle": "At the convention, in four steps",
     "steps": [
       {
         "title": "Join the event",
-        "text": "From its listing, in Rendez-vous or the directory: in one tap when it’s open, otherwise the organiser accepts your request."
+        "text": "From Explore, among the nights or in Communities: in one tap when it accepts every request, otherwise its team approves yours."
       },
       {
         "title": "Say when you want to play",
-        "text": "The whole time, or just your hours. Not sure yet? Keep the whole time."
+        "text": "The whole event, or just your hours. Not sure yet? Keep the whole event."
       },
       {
-        "title": "The tables show up",
-        "text": "Run by the convention’s GMs and its partner associations, reserved for attendees."
+        "title": "Tables appear",
+        "text": "Run by the convention’s GMs and its partners, reserved for attendees."
       },
       {
         "title": "Apply, and come play",
@@ -162,97 +133,120 @@ export const en = {
     ],
     "visuals": {
       "event": "Les Rencontres de Brumeval",
-      "eventMeta": "Verified event · 17 – 18 Oct",
-      "join": "Join the event",
-      "whole": "The whole time",
+      "eventMeta": "Verified event · 14 – 15 Nov",
+      "join": "Join",
+      "whole": "The whole event",
       "pick": "Pick my hours",
-      "table": "The Ball of Soot Masks",
-      "tableMeta": "Sat. 2 pm · 3/5 players",
-      "reserved": "Attendees only",
+      "table": "The Ball of Sooty Masks",
+      "tableMeta": "Sat 2:00 PM · 3/5 players",
+      "reserved": "Members only",
       "apply": "Ask to join",
-      "applyMeta": "GM approval"
+      "applyMeta": "The GM approves"
     },
     "noteTicket": "Without an account, the convention and its rendez-vous stay visible; its tables open to its attendees. Party doesn’t sell tickets.",
-    "noteAge": "Joining a community, chatting in its channels and applying to its tables: 18 and over.",
-    "toOrganizers": "Running an association, a venue or a convention? See Community mode"
+    "noteAge": "Joining a community and talking in its room: 18 and over.",
+    "toOrganizers": "Do you run a club, a venue or an event? Add it, and manage it from its page"
   },
   "planning": {
     "eyebrow": "The scheduler",
     "title": "No more endless polls",
-    "lead": "Everyone fills in their availability on the weekly grid. Party works out the slot where the whole table is free and opens the vote.",
+    "lead": "Everyone fills in their usual week once. Party finds the slots where the whole table is free and opens the vote.",
     "bullets": [
       [
         "Three states:",
-        "available, flexible, busy — one hour at a time."
+        "available, flexible, busy, hour by hour. Your time off and the busy slots of your calendar (Google, Apple, Outlook) are added, without their titles."
       ],
       [
-        "The common slot comes out by itself,",
-        "with the number of players free."
+        "The whole table counts:",
+        "the vote waits until everyone has given their availability, and a reminder goes out in one tap."
       ],
       [
         "One vote, one session.",
-        "The chosen slot blocks the hour in everyone’s calendar."
+        "The chosen slot blocks that box in everyone’s availability, and goes into the phone’s calendar."
+      ]
+    ]
+  },
+  "sessions": {
+    "eyebrow": "Every session",
+    "title": "Who’s coming? The whole table knows",
+    "lead": "For each date, each player says whether they’ll be there. The GM sees who’s coming at a glance, and so does the table.",
+    "bullets": [
+      [
+        "“I’ll be there” or “I can’t make it”:",
+        "one tap per date, and the count of answers for the whole table."
+      ],
+      [
+        "A date moves?",
+        "The GM moves or cancels one session, with a note: every player is told."
+      ],
+      [
+        "A reminder the day before,",
+        "then the recap to fill in."
+      ],
+      [
+        "Someone missing?",
+        "The GM looks for a stand-in for that session only: people following the table hear first, then the date shows in Explore."
       ]
     ]
   },
   "meeting": {
-    "eyebrow": "Meeting in real life",
+    "eyebrow": "Meeting in person",
     "title": "A fair meeting point",
-    "lead": "Party finds the middle of the group from the places people declared, then suggests the game bars, cafés and associations around it. The group votes.",
+    "lead": "Party works out the group’s middle from the places people declared, then suggests the game bars, cafés and clubs around it. The group votes.",
     "bullets": [
       [
         "Hundreds of communities",
-        "already on the map, with their opening days."
+        "already on the map, with the days they meet."
       ],
       [
         "Addresses stay private:",
         "only the midpoint is shared, never your home."
       ],
       [
-        "The chosen venue",
-        "shows up in the campaign lounge."
+        "The chosen place",
+        "shows in the table’s room."
       ]
     ]
   },
   "chat": {
-    "eyebrow": "Your table has its lounge",
+    "eyebrow": "Your table has its room",
     "title": "Talk before, during, after",
-    "lead": "Every campaign has its group chat, private messages and session recaps, written down by the GM.",
+    "lead": "Every table has its chat, its scheduling and its session recap, written together.",
     "bullets": [
       [
         "Table chat",
-        "with the scheduling poll and the venue vote built in."
+        "with the time-slot poll and the venue vote built in."
       ],
       [
-        "Session recaps",
-        "to reread before the next one — no more “where were we?”."
+        "A recap written together:",
+        "the whole table adds to it live, then the GM carves it. No more “where were we?”."
       ],
       [
-        "Safety panel",
-        "to ask the GM for a limit, anonymously."
+        "Anonymous request to the GM",
+        "to add a line or a veil, without the table knowing."
       ]
     ]
   },
   "safety": {
     "eyebrow": "Before you apply",
-    "title": "Themes are announced, limits are guaranteed",
-    "lead": "On every listing the GM states what the game may touch on and what they guarantee stays off the table. You keep your own list of topics to avoid: games that announce one never show up in your search.",
+    "title": "Themes announced, limits guaranteed",
+    "lead": "On every listing, the GM states what the game may touch on and what they guarantee stays off the table. You keep your own list of lines and veils: games that touch one are hidden, and Explore tells you how many.",
     "bullets": [
       [
         "Declarative filter:",
         "no reading between the lines, only what the GM announced."
       ],
       [
-        "Anonymous limit requests:",
+        "Anonymous limit request:",
         "the GM accepts or declines, the table never knows."
       ],
       [
-        "Works online and in person.",
-        ""
+        "Never an address:",
+        "a game at someone’s home shows as a circle moved at random."
       ]
     ],
     "cardTitle": "The Crypts of Vaudrac",
-    "flagsLabel": "This game may touch on:",
+    "flagsLabel": "This game may feature:",
     "flags": [
       "Horror",
       "Violence",
@@ -267,98 +261,130 @@ export const en = {
   "gm": {
     "eyebrow": "For GMs",
     "title": "Switch modes in one tap",
-    "lead": "One account, three ways to use Party. Go from player to GM whenever you like; Community mode is added if you run an association, a venue or a convention.",
+    "lead": "One account, two ways to use Party: Player to find a table, GM to propose and run yours. Each mode has its own tabs, messages and theme.",
     "modes": [
       "Player",
-      "GM",
-      "Community"
+      "GM"
     ],
-    "modesTitle": "One account, three modes",
-    "modesText": "Player and GM for everyone; Community for the people in charge. The campaigns you play in and the ones you run stay separate.",
-    "tablesTitle": "Tables on game nights and conventions",
-    "tablesText": "Attach a table to a game night or a convention: it becomes exclusive to its attendees, who get notified. Hour-by-hour attendance tells you when they’ll be there.",
-    "presenceLabel": "Attendance · Fri 16 Oct · up to 14 at once"
+    "modesTitle": "One account, two modes",
+    "modesText": "The tables you play at and the ones you run stay apart. A community is run from its own page.",
+    "tablesTitle": "Tables at game nights and conventions",
+    "tablesText": "Attach a table to a game night or a convention: it becomes reserved for its members, who are notified. Hour-by-hour presence tells you when they’ll be there.",
+    "presenceLabel": "Presence · Fri 6 Nov · up to 14 at once",
+    "pageTitle": "Your GM page",
+    "pageText": "If you wish, members who open your profile see the tables you run and have run, and your players’ reviews. Never where a table plays.",
+    "pageCard": {
+      "name": "Elena",
+      "role": "As GM",
+      "rating": "4.8 · 12 reviews",
+      "stats": "9 tables run",
+      "systems": [
+        "Pathfinder 2e",
+        "Call of Cthulhu"
+      ]
+    }
   },
   "organizers": {
-    "modes": [
-      "Player",
-      "GM",
-      "Community"
-    ],
-    "eyebrow": "Community mode · for organisers",
+    "eyebrow": "For organisers",
     "title": "Your community, full of tables",
-    "lead": "Associations, game bars, shops, conventions: a management space inside the app, with its own theme. Keep your habits and your Discord; Party makes your game nights visible and helps you run them.",
+    "lead": "Clubs, game bars, shops, conventions, online servers: your community has its page in the app. Your members find its home, its room and its member list; your team also gets the Manage tab. You keep your habits and your Discord.",
     "kinds": {
       "association": {
-        "label": "Association",
+        "label": "Club",
         "title": "Your nights, your members",
-        "text": "Your regular nights in Rendez-vous, your members and their requests, your channels. Your GMs attach their tables to the night: they’re reserved for members."
+        "text": "Your regular nights in Explore, your members and their requests, your room. Your GMs attach their tables to the night: they’re for members only."
       },
       "venue": {
         "label": "Venue",
         "title": "Your pin on the map",
-        "text": "Bar, shop, games library: list yourself. Your pin on the map, your own game nights, and your regulars putting their tables there."
+        "text": "Bar, shop, games library: your hours, your nights, and the regulars who propose their tables there."
       },
       "event": {
         "label": "Event",
         "title": "Your tables, for your attendees",
-        "text": "Convention, fair, festival: your dates, tables reserved for attendees, and partner associations that run some."
+        "text": "Convention, festival: your dates, tables reserved for attendees, and the partner clubs that propose some."
+      },
+      "online": {
+        "label": "Online",
+        "title": "Your server, its tables",
+        "text": "Discord or another network: your invite link stands in for an address, your GMs propose their online tables there."
       }
     },
-    "toolsTitle": "Everything runs from the app",
+    "toolsTitle": "The Manage tab",
     "tools": [
       [
-        "Your listing",
-        "Description, address, opening hours, Discord, verified contact."
+        "Requests",
+        "Accept, or decline with a reason sent to the person. Or accept them all in one tap."
       ],
       [
-        "Join policy",
-        "Open to all or on approval: you choose, your officers handle the requests."
+        "Join rule",
+        "Accept every request, or approval required by your team."
+      ],
+      [
+        "Listing",
+        "Name, description, place, hours, links and Discord."
       ],
       [
         "Rendez-vous",
-        "One-off or recurring. Cancel a date, duplicate for next year’s edition."
+        "One-off or recurring. Create, duplicate, cancel a date; hour-by-hour presence, without names."
+      ],
+      [
+        "Tables",
+        "The ones your GMs attached to your community."
+      ],
+      [
+        "Members and roles",
+        "Owner, team, members."
       ],
       [
         "Partnerships",
-        "An association and a convention link up: each sees the other’s tables. Channels stay members-only."
+        "A club and a convention link up: each one’s members see the other’s tables."
       ],
       [
-        "Members and moderation",
-        "Join requests, roles, removing a message or a member, 24-hour mute, reports."
-      ],
-      [
-        "Attendance",
-        "How many attendees will be there, hour by hour — the number, never the names."
+        "Reports",
+        "Messages reported in your room, handled by your team."
       ]
     ],
-    "ctaTitle": "List your community",
-    "ctaText": "Community mode shows up as soon as you run a community on Party.",
-    "venueText": "Running a venue? List it yourself from the app; we verify it afterwards.",
-    "venueCta": "Get it on Google Play",
-    "otherText": "An association or a convention? Write to us: we create or hand over its listing, and verify it.",
-    "otherCta": "Write to the Party team",
-    "contact": "contact@findyour.party"
+    "ctaTitle": "Add your community in three steps",
+    "ctaText": "In the app: Explore ▸ Communities ▸ “Add a community”. Its type, its name and place, then when people play there.",
+    "addText": "You run it? Say so at the last step: the Party team offers you a meeting, verifies the listing and hands you its management.",
+    "addCta": "Get it on Google Play",
+    "claimText": "It may already be on the map, among hundreds of listings. Open yours and tap “It is my community”. A question? Write to us.",
+    "claimCta": "Write to the Party team",
+    "contact": "contact@findyour.party",
+    "ageNote": "Running a community: 18 and over."
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Common questions",
+    "title": "Frequently asked questions",
     "items": [
       {
+        "q": "Do I need an account?",
+        "a": "Not to look around: without an account you browse online games and communities, in the app or on findyour.party.\nTo see games near you, join a table or write to someone, create an account. It’s free."
+      },
+      {
+        "q": "How old do I need to be?",
+        "a": "16. Under 18: online games, and in person the ones played at a public venue open to ages 16–17.\nCommunities and every other game: 18 and over."
+      },
+      {
         "q": "What is a community on Party?",
-        "a": "A place where role-playing happens in real life: an association, a venue (game bar, shop, games library) or an event (convention, fair, festival). Each has its listing, its rendez-vous and its tables, reserved for its members.\nThe directory and the rendez-vous can be browsed freely. Joining a community, chatting in its channels and applying to its tables: 18 and over."
+        "a": "A place where role-playing already happens: a club, a venue (game bar, shop, games library), an event (convention, festival) or an online server. Each has its page, its rendez-vous, its room and its tables, sometimes for members only."
       },
       {
         "q": "How do I join a convention?",
-        "a": "Open its listing from Rendez-vous or the directory and join it: in one tap when it’s open, otherwise the organiser accepts your request. Then say when you want to play with “I’ll be there”: the event’s tables open to you.\nParty doesn’t sell tickets: admission is handled by the convention’s organisers."
+        "a": "Find it in Explore, among the nights or in Communities, and join it: in one tap when it accepts every request, otherwise its team approves yours. Then say when you’ll be there with “I’ll be there”: its tables open to you.\nParty doesn’t sell tickets: entry is settled with the organisers."
       },
       {
         "q": "I run a convention or a bar: how do I sign up?",
-        "a": "A venue (bar, shop, games library) lists itself from the app, then goes through verification.\nFor an independent convention, write to the Party team (contact@findyour.party): we create the event, verify it and hand it over to you.\nYour association may already be among the hundreds of communities on the map: write to us to take it over."
+        "a": "Add your community from the app in three steps (Explore ▸ Communities ▸ “Add a community”) and say you run it: the Party team gets in touch, then verifies the listing.\nIt may already be on the map: open its listing and tap “It is my community”.\nA question: contact@findyour.party."
+      },
+      {
+        "q": "I like a table, but it’s full.",
+        "a": "Follow it: we tell you as soon as a seat frees up. You can also save your search as an alert: a notification when a new table matches it, at most once a day."
       },
       {
         "q": "How do themes and limits work?",
-        "a": "The GM announces on their listing the themes the game may touch on, and the ones they guarantee stay off the table. On your side you keep a list of topics you avoid: games that announce one disappear from your search. You can also ask the GM for a limit, anonymously."
+        "a": "The GM announces on their listing the themes the game may touch on, and the ones they guarantee stay off the table. On your side you keep your lines (never at the table) and your veils (fade to black): games that touch one are hidden from your search. You can also ask the GM for a limit, anonymously."
       },
       {
         "q": "Which role-playing games are supported?",
@@ -368,8 +394,9 @@ export const en = {
   },
   "final": {
     "title": "Ready to roll?",
-    "lead": "Free on Android. Find a table, settle the time and the place, play.",
-    "cta": "Get it on Google Play"
+    "lead": "Free on Android. Find a table, settle the session, play.",
+    "cta": "Get it on Google Play",
+    "web": "Or open Party in your browser"
   },
   "footer": {
     "terms": "Terms of Service",

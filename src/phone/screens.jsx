@@ -2,182 +2,158 @@ import React from 'react';
 import { Icon } from '../components/Icons';
 import { AppHeader, BottomNav, ChatHeader } from './Chrome';
 
-// Screen bodies, rebuilt from the app's « épuré » components: one card per
-// item, one visible action per card (the rest behind "⋯"), segments as raised
-// tiles, Cinzel only for screen titles and the game card.
+// Screen bodies, rebuilt from the app's components: Explorer lists one line
+// per table (it unfolds), a rendez-vous groups its tables under its date,
+// segments are raised tiles, Cinzel only for screen titles.
 
-const More = () => <span className="ph-more" aria-hidden="true"><Icon name="more" size={20} /></span>;
+/* ---- Player · Explorer ▸ Parties ------------------------------------------- */
 
-/* ---- Player · Explorer ---------------------------------------------------- */
-
-export function GamesBody({ c }) {
-  const g = c.game;
+function TableLine({ title, sub, seats }) {
   return (
-    <div className="ph-body">
-      <article className="p-card p-card--feature">
-        <span className="ph-pager">3/12 <i /><i /><i /><i /></span>
-        <div className="ph-media">
-          <span className="ph-media__save"><Icon name="bookmark" size={14} /></span>
-          <span className="ph-media__system">{g.system}</span>
-        </div>
-        <h3 className="ph-game-title">{g.title}</h3>
-        <hr className="ph-rule" />
-        <div className="ph-gm">
-          <strong>{g.gm}</strong>
-          <span className="ph-tag ph-tag--round"><Icon name="star" size={11} color="var(--party-amber)" style={{ fill: 'var(--party-amber)' }} />{g.rating} {g.reviews}</span>
-        </div>
-        <div className="ph-facts">
-          <div><Icon name="calendar" size={13} />{g.when}</div>
-          <div><Icon name="pin" size={13} />{g.where}</div>
-          <div><Icon name="users" size={13} />{g.seats} <span className="ph-ok">{g.seatsLeft}</span></div>
-          <div><Icon name="shield" size={13} />{g.level}</div>
-        </div>
-        <p className="ph-label" style={{ fontFamily: 'var(--font-title)', marginBottom: 4 }}>{g.about}</p>
-        <p className="p-card__text" style={{ fontStyle: 'italic', fontSize: '0.82rem', marginBottom: 14 }}>{g.summary}</p>
-        <div className="ph-safety">
-          <div className="ph-label"><Icon name="eye" size={13} />{g.mayFeature}</div>
-          <div className="ph-tags">{g.flags.map((f) => <span key={f} className="ph-tag ph-tag--info">{f}</span>)}</div>
-          <div className="ph-label"><Icon name="shield" size={13} />{g.offTable}</div>
-          <div className="ph-tags">{g.lines.map((l) => <span key={l} className="ph-tag ph-tag--line"><Icon name="ban" size={11} />{l}</span>)}</div>
-        </div>
-      </article>
+    <div className="ph-line">
+      <span className="ph-line__icon"><Icon name="scroll" size={18} /></span>
+      <span className="ph-line__main"><b>{title}</b><small>{sub}</small></span>
+      <span className="ph-line__seats">{seats}</span>
     </div>
   );
 }
 
-export function AgendaBody({ c }) {
+export function GamesBody({ c }) {
+  const { open: o, group: g } = c.games;
   return (
-    <div className="ph-body">
-      {c.agenda.map((day) => (
-        <React.Fragment key={day.day}>
-          <h3 className="ph-day">{day.day}</h3>
-          {day.items.map((o) => (
-            <article key={o.title} className="p-card">
-              <div className="p-card__top">
-                <span className="p-card__when">{o.when}</span>
-                {o.repeat && <span><Icon name="repeat" size={11} />{o.repeat}</span>}
-                <span className="p-card__far">{o.far}</span>
-              </div>
-              <h3 className="p-card__title">{o.title}</h3>
-              <div className="p-card__meta">
-                <span><Icon name={o.kind} size={14} />{o.community}</span>
-                <span><Icon name="pin" size={14} />{o.place}</span>
-                <span><Icon name="dice" size={14} />{o.tables}</span>
-                <span><Icon name="users" size={14} />{o.people}</span>
-              </div>
-              {o.text && <p className="p-card__text">{o.text}</p>}
-              {o.action && (
-                <div className="p-card__actions">
-                  {o.action === 'gold'
-                    ? <span className="ph-btn ph-btn--gold"><Icon name="calendarCheck" size={16} />{c.attend}</span>
-                    : <span className="ph-btn ph-btn--quiet" style={{ flex: 'none' }}><Icon name="check" size={16} />{c.attend}</span>}
-                  <span style={{ marginLeft: 'auto' }}><More /></span>
-                </div>
-              )}
-            </article>
+    <div className="ph-body ph-body--list">
+      <article className="p-card ph-open">
+        <div className="ph-line">
+          <span className="ph-line__icon"><Icon name="scroll" size={18} /></span>
+          <span className="ph-line__main"><b>{o.title}</b><small>{o.sub}</small></span>
+          <span className="ph-line__seats">{o.seats}</span>
+        </div>
+        <div className="ph-fit"><i />{o.fit}</div>
+        <div className="ph-facts">
+          <div><Icon name="shield" size={13} /><strong>{o.gm}</strong><Icon name="star" size={12} color="var(--party-amber)" style={{ fill: 'var(--party-amber)' }} />{o.rating}</div>
+          <div><Icon name="calendar" size={13} />{o.when}</div>
+          <div><Icon name="users" size={13} />{o.level}</div>
+        </div>
+        <div className="ph-label"><Icon name="eye" size={13} />{o.mayFeature}</div>
+        <div className="ph-tags" style={{ marginTop: 4 }}>{o.flags.map((f) => <span key={f} className="ph-tag ph-tag--info">{f}</span>)}</div>
+        <span className="ph-btn ph-btn--gold" style={{ marginTop: 12 }}>{o.apply}</span>
+      </article>
+
+      <section className="ph-group">
+        <header className="ph-group__head">
+          <span className="ph-date"><small>{g.dow}</small>{g.day}</span>
+          <span className="ph-line__main"><b className="ph-group__title">{g.title}</b><small>{g.meta}</small></span>
+          <Icon name="chevronDown" size={18} style={{ transform: 'rotate(180deg)' }} />
+        </header>
+        <div className="ph-group__rows">
+          {g.rows.map(([title, sub, seats]) => (
+            <div key={title} className="p-card ph-line-card"><TableLine title={title} sub={sub} seats={seats} /></div>
           ))}
-        </React.Fragment>
-      ))}
+          <div className="ph-propose-here">{g.propose}<Icon name="plus" size={16} /></div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+/* ---- Player · Explorer ▸ Communautés ---------------------------------------- */
+
+function CommunityLine({ icon, name, sub, badge, tone, extra }) {
+  return (
+    <div className="p-card p-card--row ph-community">
+      <span className="p-card__avatar"><Icon name={icon} size={19} /></span>
+      <div className="p-card__body">
+        <div className="p-card__title">{name}</div>
+        <div className="p-card__sub">{sub}</div>
+        {extra && <div className="p-card__sub" style={{ color: 'var(--party-title-color)' }}>{extra}</div>}
+      </div>
+      {badge && <span className={`ph-tag${tone ? ` ph-tag--${tone}` : ''}`}>{badge}</span>}
+      <Icon name="chevronRight" size={18} color="var(--party-amber)" />
     </div>
   );
 }
 
 export function CommunitiesBody({ c }) {
+  const m = c.communities;
   return (
-    <div className="ph-body">
-      {c.communities.map((m) => (
-        <article key={m.name} className="p-card" style={{ gap: 8, border: '1.5px solid var(--border-gold)' }}>
-          <div className="p-card__top">
-            <span className="ph-tag ph-tag--success"><Icon name="badgeCheck" size={12} />{m.verified}</span>
-            <span className="ph-tag"><Icon name={m.icon} size={12} />{m.kind}</span>
-            <span className="p-card__far">{m.far}</span>
-          </div>
-          <h3 className="ph-game-title" style={{ fontSize: '1.1rem' }}>{m.name}</h3>
-          <div className="p-card__meta" style={{ flexDirection: 'column', alignItems: 'flex-start', color: 'var(--party-text)' }}>
-            <span><Icon name="pin" size={14} />{m.place}</span>
-            <span><Icon name="clock" size={14} />{m.hours}</span>
-          </div>
-          <div className="p-card__meta" style={{ color: 'var(--party-text)' }}>
-            <span><Icon name="users" size={14} />{m.members}</span>
-            <span><Icon name="doorOpen" size={14} />{m.join}</span>
-            <span><Icon name="pin" size={14} />{m.mode}</span>
-          </div>
-          <p className="p-card__text">{m.text}</p>
-          <div className="ph-tags"><Icon name="dice" size={14} color="var(--party-amber)" />{m.systems.map((s) => <span key={s} className="ph-tag">{s}</span>)}</div>
-        </article>
+    <div className="ph-body ph-body--list">
+      <h3 className="ph-list-title">{m.mineTitle}</h3>
+      {m.mine.map(([icon, name, sub, badge]) => (
+        <CommunityLine key={name} icon={icon} name={name} sub={sub} badge={badge} />
+      ))}
+      <h3 className="ph-list-title">{m.discoverTitle}</h3>
+      {m.discover.map(([icon, name, sub, verified, next]) => (
+        <CommunityLine key={name} icon={icon} name={name} sub={sub} badge={verified} tone="success" extra={next} />
       ))}
     </div>
   );
 }
 
-/* ---- GM · Host -------------------------------------------------------------- */
+/* ---- GM · Propose ▸ « Où jouerez-vous ? » ------------------------------------ */
 
-export function GmBody({ c, hours }) {
-  const p = c.propose;
-  const levels = [0.35, 0.6, 1, 0.95, 0.75, 0.45];
+function Choice({ on, title, sub }) {
   return (
-    <div className="ph-body">
-      <h2 className="ph-screen-title"><Icon name="plusCircle" size={20} />{p.title}</h2>
-      {[['globe', p.free], ['landmark', p.community]].map(([icon, [title, sub]]) => (
-        <div key={title} className="p-card p-card--row">
-          <span className="p-card__avatar"><Icon name={icon} size={20} /></span>
-          <div className="p-card__body"><div className="p-card__title">{title}</div><div className="p-card__sub">{sub}</div></div>
-          <Icon name="chevronRight" size={18} color="var(--party-amber)" />
-        </div>
-      ))}
-      <h3 className="p-section__title" style={{ marginTop: 6 }}><Icon name="calendarDays" size={18} />{p.upcoming}</h3>
-      <div className="p-row-group">
-        {p.rows.map(([title, sub]) => (
-          <div key={title} className="p-row">
-            <span className="p-row__label">{title}<span className="p-row__detail">{sub}</span></span>
-            <Icon name="plusCircle" size={20} />
-          </div>
-        ))}
-      </div>
-      <div className="p-card" style={{ gap: 10 }}>
-        <div className="p-section__title"><Icon name="barChart" size={18} />{p.presence}</div>
-        <div className="p-card__sub">{p.presenceSub}</div>
-        <div className="ph-presence">
-          {hours.map((h, i) => <div key={h}><b style={{ opacity: levels[i] }} />{h}</div>)}
-        </div>
-      </div>
+    <div className={`ph-radio${on ? ' ph-radio--on' : ''}`}>
+      <span className="ph-radio__dot" />
+      <span><strong>{title}</strong>{sub && <small>{sub}</small>}</span>
     </div>
   );
 }
 
-/* ---- Community · Sheet ------------------------------------------------------ */
-
-export function CommunityBody({ c }) {
-  const s = c.steward;
+export function WhereBody({ c }) {
+  const w = c.where;
   return (
-    <>
-      <div className="ph-shell-head">
-        <Icon name="landmark" size={18} />
-        <h2>{s.title}</h2>
-        <span className="ph-select"><span>{s.pick}</span><Icon name="chevronDown" size={13} /></span>
+    <div className="ph-body">
+      <h2 className="ph-screen-title"><Icon name="plusCircle" size={20} />{w.title}</h2>
+      <Choice title={w.free[0]} sub={w.free[1]} />
+      <Choice on title={w.community[0]} sub={w.community[1]} />
+      <div className="ph-label" style={{ color: 'var(--party-text)' }}>{w.mineTitle}</div>
+      {w.mine.map(([name, sub], i) => <Choice key={name} on={i === 0} title={name} sub={sub} />)}
+      <div className="ph-search ph-search--field"><Icon name="search" size={15} />{w.search}</div>
+      <div className="ph-label" style={{ color: 'var(--party-text)' }}>{w.gatheringsTitle}</div>
+      <div className="ph-chips">
+        {w.chips.map((label, i) => <span key={label} className={`ph-chip-pick${i === 0 ? ' is-on' : ''}`}>{label}</span>)}
       </div>
-      <div className="ph-body">
-        <div className="p-card" style={{ gap: 10 }}>
-          <div className="p-card__top" style={{ justifyContent: 'space-between' }}>
-            <span className="ph-label" style={{ color: 'var(--party-text)' }}>{s.sheet}</span>
-            <span className="ph-label" style={{ color: 'var(--success)' }}><Icon name="badgeCheck" size={14} />{s.verified}</span>
+      <p className="ph-note">{w.info}</p>
+    </div>
+  );
+}
+
+/* ---- A community's page, owner view (Gérer) ---------------------------------- */
+
+export function CommunityPageScreen({ c }) {
+  const p = c.page;
+  return (
+    <div className="ph ph--player">
+      <AppHeader mode="player" labels={c.modes} aria={c.aria} />
+      <div className="ph-backdrop">
+        <div className="ph-sheet">
+          <div className="ph-sheet__head">
+            <h2 className="ph-sheet__title">{p.name}</h2>
+            <span className="ph-close"><Icon name="x" size={16} /></span>
           </div>
-          {s.fields.map(([label, value]) => (
-            <label key={label} className="ph-field"><span>{label}</span><div>{value}</div></label>
-          ))}
-        </div>
-        <div className="p-card" style={{ gap: 8 }}>
-          <div className="ph-label"><Icon name="userCheck" size={13} color="var(--party-amber)" />{s.join}</div>
-          <div className="p-card__sub">{s.howLabel}</div>
-          {s.policies.map(([title, hint], i) => (
-            <div key={title} className={`ph-radio${i === 0 ? ' ph-radio--on' : ''}`}>
-              <span className="ph-radio__dot" />
-              <span><strong>{title}</strong><small>{hint}</small></span>
-            </div>
-          ))}
+          <div className="p-card__sub">{p.meta}</div>
+          <div className="ph-tags" style={{ marginTop: 8 }}>
+            <span className="ph-tag ph-tag--success" style={{ borderColor: 'transparent' }}>{p.active}</span>
+            <span className="ph-tag ph-tag--success" style={{ background: 'transparent' }}><Icon name="badgeCheck" size={12} />{p.verified}</span>
+          </div>
+          <div className="ph-owner"><Icon name="crown" size={16} />{p.owner}</div>
+          <div className="ph-underline-tabs">
+            {p.tabs.map((label, i) => <span key={label} className={i === p.tabs.length - 1 ? 'is-on' : undefined}>{label}</span>)}
+          </div>
+          <div className="p-row-group">
+            {p.rows.map(([icon, title, sub], i) => (
+              <div key={title} className="p-row">
+                <Icon name={icon} size={20} />
+                <span className="p-row__label" style={{ color: 'var(--party-title-color)' }}>{title}<span className="p-row__detail">{sub}</span></span>
+                {i === 0 && <span className="p-badge-count p-badge-count--inline">3</span>}
+                <Icon name="chevronRight" size={16} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -186,7 +162,7 @@ export function CommunityBody({ c }) {
 function TableScreen({ c, tab, sheet = false, children }) {
   return (
     <div className="ph ph--player">
-      <AppHeader mode="player" labels={c.modes} aria={c.aria} threeModes={false} />
+      <AppHeader mode="player" labels={c.modes} aria={c.aria} />
       {!sheet && <ChatHeader ch={c.chat} tab={tab} />}
       {children}
       <BottomNav mode="player" labels={c.nav.player} active={2} />
@@ -240,6 +216,36 @@ export function PlanningScreen({ c }) {
             </div>
           ))}
         </div>
+      </div>
+    </TableScreen>
+  );
+}
+
+/** Scheduling ▸ the next dates: each player answers, the GM moved one. */
+export function SessionsScreen({ c }) {
+  const s = c.sessions;
+  return (
+    <TableScreen c={c} tab={2}>
+      <div className="ph-body">
+        <h3 className="ph-day" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '1rem', margin: 0 }}>
+          <Icon name="calendarClock" size={18} color="var(--party-amber)" />{s.label}
+        </h3>
+        {s.dates.map((d) => (
+          <div key={d.day} className="p-card" style={{ gap: 6 }}>
+            <div className="ph-session-when">
+              <b>{d.day} · {d.time}</b>
+              {d.moved && <span className="ph-tag">{d.moved}</span>}
+            </div>
+            {d.was && <div className="p-card__sub">{d.was}</div>}
+            {d.note && <div className="ph-session-note">{d.note}</div>}
+            <div className="ph-rsvp">
+              <span className={d.mine === 'yes' ? 'is-yes' : undefined}><Icon name="check" size={14} />{s.yes}</span>
+              <span className={d.mine === 'no' ? 'is-no' : undefined}><Icon name="x" size={14} />{s.no}</span>
+            </div>
+            <div className="p-card__sub"><Icon name="users" size={13} color="var(--party-amber)" style={{ verticalAlign: '-2px', marginRight: 6 }} />{d.summary}</div>
+          </div>
+        ))}
+        <span className="ph-btn ph-btn--line" style={{ alignSelf: 'center' }}>{s.more}</span>
       </div>
     </TableScreen>
   );

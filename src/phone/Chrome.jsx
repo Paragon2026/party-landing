@@ -1,28 +1,27 @@
 import React from 'react';
 import { Icon } from '../components/Icons';
 
-// The app's frame around every screen (party-app TopHeader, FilterSortPanel,
-// NavigationSwipeBar, the table chat header), in its « épuré » form.
+// The app's frame around every screen (party-app TopHeader, Explorer's toolbar,
+// NavigationSwipeBar, the table chat header), as of the two-mode app: Player
+// and GM; a community is run from its own page.
 
-const MODE_IDS = ['player', 'gm', 'community'];
+const MODE_IDS = ['player', 'gm'];
 const NAV_ICONS = {
   player: ['compass', 'dice', 'message'],
   gm: ['plusCircle', 'scroll', 'message'],
-  community: ['idCard', 'calendarDays', 'users'],
 };
 
 /** Logo · mode switch · bell · Friends · avatar. `onMode` makes the switch clickable. */
-export function AppHeader({ mode, labels, aria, onMode, threeModes = true }) {
-  const ids = threeModes ? MODE_IDS : MODE_IDS.slice(0, 2);
-  const idx = Math.max(0, ids.indexOf(mode));
+export function AppHeader({ mode, labels, aria, onMode }) {
+  const idx = Math.max(0, MODE_IDS.indexOf(mode));
   return (
     <div className="ph-header">
       <img className="ph-logo" src={`${import.meta.env.BASE_URL}logo-128.png`} alt="" width="28" height="28" />
       <div className="ph-header__right">
         <div className="ph-switch" role="group" aria-label={aria.mode}>
           <span className="ph-switch__thumb" aria-hidden="true"
-            style={{ width: `calc((100% - 4px) / ${ids.length})`, left: `calc(2px + ${idx} * (100% - 4px) / ${ids.length})` }} />
-          {ids.map((id, i) => (
+            style={{ width: `calc((100% - 4px) / ${MODE_IDS.length})`, left: `calc(2px + ${idx} * (100% - 4px) / ${MODE_IDS.length})` }} />
+          {MODE_IDS.map((id, i) => (
             <button key={id} type="button" className="ph-switch__opt" aria-pressed={id === mode}
               tabIndex={onMode ? 0 : -1} onClick={onMode ? () => onMode(id) : undefined}
               style={onMode ? undefined : { cursor: 'default' }}>
@@ -38,13 +37,14 @@ export function AppHeader({ mode, labels, aria, onMode, threeModes = true }) {
   );
 }
 
-/** Explorer's toolbar: search, the three directories, Filters (and "Mine" on communities). */
+/** Explorer's toolbar: search, Games | Communities, place · Last minute · Filters, then count · sort · alerts. */
 export function ExplorerBar({ tab, onTab, c }) {
+  const games = tab === 'games';
   return (
     <div className="ph-toolbar">
       <div className="ph-search"><Icon name="search" size={15} />{c.search[tab]}</div>
       <div className="p-segmented" role="tablist" aria-label={c.aria.browse}>
-        {['games', 'agenda', 'communities'].map((id) => (
+        {['games', 'communities'].map((id) => (
           <button key={id} type="button" role="tab" className="p-segmented__item" aria-selected={id === tab}
             onClick={() => onTab(id)}>
             <span>{c.tabs[id]}</span>
@@ -52,9 +52,19 @@ export function ExplorerBar({ tab, onTab, c }) {
         ))}
       </div>
       <div className="p-chip-row">
-        <span className="p-chip"><Icon name="sliders" size={16} />{c.filters}</span>
-        {tab === 'communities' && <span className="p-chip">{c.mine}</span>}
-        <span className="ph-result">{c.results[tab]}</span>
+        <span className="p-chip"><Icon name="pin" size={15} />{c.place}</span>
+        {games && <span className="p-chip"><Icon name="userPlus" size={15} />{c.lastMinute}</span>}
+        <span className="p-chip"><Icon name="sliders" size={15} />{c.filters}</span>
+      </div>
+      {!games && (
+        <div className="p-chip-row" style={{ justifyContent: 'flex-end' }}>
+          <span className="p-chip"><Icon name="plus" size={15} />{c.addCommunity}</span>
+        </div>
+      )}
+      <div className="ph-results">
+        <span>{c.results[tab]}</span>
+        <span className="ph-sort-btn"><Icon name="arrowUpDown" size={15} />{c.sort[tab]}<Icon name="chevronDown" size={14} /></span>
+        {games && <span className="ph-bell" role="img" aria-label={c.aria.alerts}><Icon name="bell" size={17} /></span>}
       </div>
     </div>
   );

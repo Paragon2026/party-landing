@@ -4,11 +4,11 @@ import { Bullets } from './Feature';
 import { Icon } from './Icons';
 import { PHONE } from '../phone/content';
 import { AppHeader, BottomNav, ExplorerBar } from '../phone/Chrome';
-import { AgendaBody, CommunitiesBody, CommunityBody, GamesBody, GmBody } from '../phone/screens';
+import { CommunitiesBody, GamesBody, WhereBody } from '../phone/screens';
 
 // The clickable phone: the mode switch and the Explorer segments are real
-// buttons; each mode shows its first bottom tab (Explorer · Host · Sheet).
-const PLAYER_BODIES = { games: GamesBody, agenda: AgendaBody, communities: CommunitiesBody };
+// buttons; each mode shows its first bottom tab (Explorer · Propose).
+const PLAYER_BODIES = { games: GamesBody, communities: CommunitiesBody };
 const GM_BADGES = { 1: 3 }; // "My campaigns": three requests to answer
 
 const OUTER_W = 418;
@@ -38,8 +38,7 @@ function ExplorerPhone({ mode, tab, onMode, onTab, c }) {
             {mode === 'player' && <ExplorerBar tab={tab} onTab={onTab} c={c} />}
             <div key={key} className="xp-fade" style={{ flex: '1 1 auto', minHeight: 0, display: 'flex', flexDirection: 'column' }}>
               {Body && <Body c={c} />}
-              {mode === 'gm' && <GmBody c={c} hours={c.hours} />}
-              {mode === 'community' && <CommunityBody c={c} />}
+              {mode === 'gm' && <WhereBody c={c} />}
             </div>
             <BottomNav mode={mode} labels={c.nav[mode]} active={0} badges={mode === 'gm' ? GM_BADGES : undefined} />
           </div>

@@ -32,8 +32,9 @@ function Page() {
           <Explorer />
           <Communities />
           <Feature id="planning" screen="planning" copy={loc.planning} />
-          <Feature id="rendezvous" screen="meeting" copy={loc.meeting} flip />
-          <Feature id="salon" screen="chat" copy={loc.chat} />
+          <Feature id="seances" screen="sessions" copy={loc.sessions} flip />
+          <Feature id="rendezvous" screen="meeting" copy={loc.meeting} />
+          <Feature id="salon" screen="chat" copy={loc.chat} flip />
           <Safety />
           <GmSection />
           <Organizers />
